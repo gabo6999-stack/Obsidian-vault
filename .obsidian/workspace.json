@@ -1,0 +1,217 @@
+{
+  "main": {
+    "id": "1ec7aa5a70bbea5a",
+    "type": "split",
+    "children": [
+      {
+        "id": "f6ff9975c5d72c7b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4062f1b461e30063",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "04 - Sesiones/2026-06-08 — Cerebro Obsidian.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-06-08 — Cerebro Obsidian"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a94fec812d57a7cb",
+    "type": "split",
+    "children": [
+      {
+        "id": "8d19864946d3695d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2e68fccaa554ba3c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "e1df25db9a11c1e3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "d729be544cca7f1e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "bdfe45a335ea6d3c",
+    "type": "split",
+    "children": [
+      {
+        "id": "d060de6bd42526b7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e5e4901062143572",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "04 - Sesiones/2026-06-08 — Cerebro Obsidian.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de 2026-06-08 — Cerebro Obsidian"
+            }
+          },
+          {
+            "id": "dede4c42f8c22e8d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Home.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes de Home"
+            }
+          },
+          {
+            "id": "32b84c88faba16c4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "d75c92f86af9e116",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas las propiedades"
+            }
+          },
+          {
+            "id": "fc2dc8be824d0a99",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Home.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema de Home"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false
+    }
+  },
+  "active": "4062f1b461e30063",
+  "lastOpenFiles": [
+    "01 - Proyectos/grupoptm.com.md",
+    "04 - Sesiones/2026-06-08 — Plan Maestro PTM.md.tmp.4052.49352658ef2f",
+    "01 - Proyectos/Agente SEO GSC.md.tmp.4052.73e4d2102bcd",
+    "01 - Proyectos/grupoptm.mx.md.tmp.4052.7db30047ef91",
+    "04 - Sesiones/2026-06-08 — Cerebro Obsidian.md.tmp.4052.cf8e0a0ee1a3",
+    "01 - Proyectos/grupoptm.mx.md",
+    "01 - Proyectos/grupoptm.mx.md.tmp.4052.d257518901a6",
+    "01 - Proyectos/Agente SEO GSC.md",
+    "01 - Proyectos/Agente SEO GSC.md.tmp.4052.7f3b4e60ee1b",
+    "Home.md",
+    "02 - Contexto/Ecosistema PTM-PYS.md",
+    "04 - Sesiones/2026-06-08 — Plan Maestro PTM.md",
+    "04 - Sesiones/2026-06-08 — Agente SEO PTM Cross-linking.md",
+    "01 - Proyectos/Ecommerce Agent.md",
+    "02 - Contexto/Stack Compartido.md",
+    "01 - Proyectos/Chatbot PYS.md",
+    "2026-06-08.md.tmp.22780.065908123d4f",
+    "04 - Sesiones/2026-06-08 — Agente SEO PTM Cross-linking.md.tmp.22780.ecf450b4a2ba",
+    "2026-06-08.md.tmp.26940.8db98d645d1d",
+    "04 - Sesiones/2026-06-08 — Obsidian Vault Setup.md",
+    "04 - Sesiones/2026-06-08 — Obsidian Vault Setup.md.tmp.26940.e7fbcd373286",
+    "01 - Proyectos/PTM Novo.md",
+    "01 - Proyectos/AutoDiag Pro.md",
+    "01 - Proyectos/Agente de Blogs.md",
+    "01 - Proyectos/Gloria IEM AI.md",
+    "01 - Proyectos/Servidor Licencias AutoDiag.md",
+    "03 - Referencia/Obsidian CLI — Referencia.md",
+    "2026-06-08.md",
+    "04 - Sesiones/2026-06-08 — Cerebro Obsidian.md"
+  ]
+}
