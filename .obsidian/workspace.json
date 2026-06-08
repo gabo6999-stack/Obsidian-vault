@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04 - Sesiones/2026-06-08 — Plan Maestro PTM.md",
+                "file": "Home.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-06-08 — Plan Maestro PTM"
+              "title": "Home"
             }
           }
         ]
@@ -94,17 +94,17 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04 - Sesiones/2026-06-08 — Plan Maestro PTM.md",
+                "file": "Home.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes de 2026-06-08 — Plan Maestro PTM"
+              "title": "Enlaces entrantes de Home"
             }
           },
           {
@@ -179,12 +179,12 @@
       "daily-notes:Abrir la nota de hoy": false,
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
-      "bases:Crear nueva base": false,
-      "obsidian-git:Open Git source control": false
+      "bases:Crear nueva base": false
     }
   },
-  "active": "4062f1b461e30063",
+  "active": "e5e4901062143572",
   "lastOpenFiles": [
+    "04 - Sesiones/2026-06-08 — Plan Maestro PTM.md",
     "04 - Sesiones/2026-06-08 — Agente SEO PTM Cross-linking.md",
     "04 - Sesiones/2026-06-08 — Cerebro Obsidian.md",
     "04 - Sesiones/2026-06-08 — grupoptm.com Activación.md",
@@ -200,7 +200,6 @@
     "01 - Proyectos/Agente SEO GSC.md.tmp.4052.7f3b4e60ee1b",
     "Home.md",
     "02 - Contexto/Ecosistema PTM-PYS.md",
-    "04 - Sesiones/2026-06-08 — Plan Maestro PTM.md",
     "01 - Proyectos/Ecommerce Agent.md",
     "02 - Contexto/Stack Compartido.md",
     "01 - Proyectos/Chatbot PYS.md",
