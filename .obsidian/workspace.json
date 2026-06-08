@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Home.md",
+                "file": "2026-06-08.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Home"
+              "title": "2026-06-08"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Home.md",
+                "file": "2026-06-08.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes de Home"
+              "title": "Enlaces entrantes de 2026-06-08"
             }
           },
           {
@@ -179,11 +179,13 @@
       "daily-notes:Abrir la nota de hoy": false,
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
-      "bases:Crear nueva base": false
+      "bases:Crear nueva base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e5e4901062143572",
+  "active": "4062f1b461e30063",
   "lastOpenFiles": [
+    "Home.md",
     "04 - Sesiones/2026-06-08 — Plan Maestro PTM.md",
     "04 - Sesiones/2026-06-08 — Agente SEO PTM Cross-linking.md",
     "04 - Sesiones/2026-06-08 — Cerebro Obsidian.md",
@@ -198,7 +200,6 @@
     "01 - Proyectos/grupoptm.mx.md.tmp.4052.d257518901a6",
     "01 - Proyectos/Agente SEO GSC.md",
     "01 - Proyectos/Agente SEO GSC.md.tmp.4052.7f3b4e60ee1b",
-    "Home.md",
     "02 - Contexto/Ecosistema PTM-PYS.md",
     "01 - Proyectos/Ecommerce Agent.md",
     "02 - Contexto/Stack Compartido.md",
