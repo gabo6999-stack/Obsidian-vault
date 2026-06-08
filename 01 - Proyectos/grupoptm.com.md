@@ -63,3 +63,8 @@ Cada landing termina con CTA → [[PTM Novo]] en Railway.
 - Variables Railway configuradas: PTM_WP_USER, PTM_WP_PASSWORD, PTM_URL ✅
 - Código cross-linking en ecommerce-agent mergeado a main ✅
 - Pendiente: crear las 5 páginas y diseñar en Elementor
+
+---
+
+## Sesión 2026-06-08 (Activación)
+Plugins instalados (JWT Auth, Rank Math), variables Railway configuradas, conexión verificada con get_ptm_pages(). Error de dominio .mx corregido a .com. Pendiente: crear las 5 páginas en WP.

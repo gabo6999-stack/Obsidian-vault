@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04 - Sesiones/2026-06-08 — Cerebro Obsidian.md",
+                "file": "04 - Sesiones/2026-06-08 — Plan Maestro PTM.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-06-08 — Cerebro Obsidian"
+              "title": "2026-06-08 — Plan Maestro PTM"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04 - Sesiones/2026-06-08 — Cerebro Obsidian.md",
+                "file": "04 - Sesiones/2026-06-08 — Plan Maestro PTM.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes de 2026-06-08 — Cerebro Obsidian"
+              "title": "Enlaces entrantes de 2026-06-08 — Plan Maestro PTM"
             }
           },
           {
@@ -179,11 +179,16 @@
       "daily-notes:Abrir la nota de hoy": false,
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
-      "bases:Crear nueva base": false
+      "bases:Crear nueva base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "4062f1b461e30063",
   "lastOpenFiles": [
+    "04 - Sesiones/2026-06-08 — Agente SEO PTM Cross-linking.md",
+    "04 - Sesiones/2026-06-08 — Cerebro Obsidian.md",
+    "04 - Sesiones/2026-06-08 — grupoptm.com Activación.md",
+    "04 - Sesiones/2026-06-08 — grupoptm.com Activación.md.tmp.4052.2721e79e35ab",
     "01 - Proyectos/grupoptm.com.md",
     "04 - Sesiones/2026-06-08 — Plan Maestro PTM.md.tmp.4052.49352658ef2f",
     "01 - Proyectos/Agente SEO GSC.md.tmp.4052.73e4d2102bcd",
@@ -196,7 +201,6 @@
     "Home.md",
     "02 - Contexto/Ecosistema PTM-PYS.md",
     "04 - Sesiones/2026-06-08 — Plan Maestro PTM.md",
-    "04 - Sesiones/2026-06-08 — Agente SEO PTM Cross-linking.md",
     "01 - Proyectos/Ecommerce Agent.md",
     "02 - Contexto/Stack Compartido.md",
     "01 - Proyectos/Chatbot PYS.md",
@@ -204,14 +208,12 @@
     "04 - Sesiones/2026-06-08 — Agente SEO PTM Cross-linking.md.tmp.22780.ecf450b4a2ba",
     "2026-06-08.md.tmp.26940.8db98d645d1d",
     "04 - Sesiones/2026-06-08 — Obsidian Vault Setup.md",
-    "04 - Sesiones/2026-06-08 — Obsidian Vault Setup.md.tmp.26940.e7fbcd373286",
     "01 - Proyectos/PTM Novo.md",
     "01 - Proyectos/AutoDiag Pro.md",
     "01 - Proyectos/Agente de Blogs.md",
     "01 - Proyectos/Gloria IEM AI.md",
     "01 - Proyectos/Servidor Licencias AutoDiag.md",
     "03 - Referencia/Obsidian CLI — Referencia.md",
-    "2026-06-08.md",
-    "04 - Sesiones/2026-06-08 — Cerebro Obsidian.md"
+    "2026-06-08.md"
   ]
 }

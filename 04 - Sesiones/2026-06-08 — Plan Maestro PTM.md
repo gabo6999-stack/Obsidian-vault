@@ -28,11 +28,11 @@ proyecto: grupoptm.com
 - Plugins WP pendientes de instalar en grupoptm.com: JWT Auth, Rank Math
 
 ## Próximos pasos
-- [ ] Instalar JWT Authentication for WP-API en grupoptm.com
+- [x] Instalar JWT Authentication for WP-API en grupoptm.com
 - [ ] Editar wp-config.php: JWT_AUTH_SECRET_KEY y JWT_AUTH_CORS_ENABLE=true
 - [ ] Instalar Rank Math en grupoptm.com
 - [ ] Crear Application Password en WP admin → agregar al agente SEO
-- [ ] Agregar en Railway ecommerce-agent: PTM_WP_USER, PTM_WP_PASSWORD, PTM_URL=https://grupoptm.com
+- [x] Agregar en Railway ecommerce-agent: PTM_WP_USER, PTM_WP_PASSWORD, PTM_URL=https://grupoptm.com
 - [ ] Crear las 5 páginas en WP con título y slug correcto
 - [ ] Verificar con get_ptm_pages() desde el chat del agente SEO
 - [ ] Diseñar cada landing en Elementor

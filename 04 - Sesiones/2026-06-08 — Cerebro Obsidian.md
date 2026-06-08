@@ -34,6 +34,6 @@ proyecto: Cerebro Obsidian
 ## Próximos pasos
 
 - [x] Verificar que el hook Stop funciona — probado manualmente, responde OK (2026-06-08)
-- [ ] Probar flujo `/gs` completo en una sesión de proyecto (ej. PTM Novo)
+- [x] Probar flujo `/gs` completo en una sesión de proyecto (ej. PTM Novo)
 - [x] Actualizar notas de proyectos — grupoptm.mx y Agente SEO GSC creadas (2026-06-08)
 - [x] Agregar nota de Agente SEO GSC en `01 - Proyectos/` — creada (2026-06-08)
