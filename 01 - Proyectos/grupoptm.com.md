@@ -68,3 +68,11 @@ Cada landing termina con CTA → [[PTM Novo]] en Railway.
 
 ## Sesión 2026-06-08 (Activación)
 Plugins instalados (JWT Auth, Rank Math), variables Railway configuradas, conexión verificada con get_ptm_pages(). Error de dominio .mx corregido a .com. Pendiente: crear las 5 páginas en WP.
+
+
+---
+
+## Sesión 2026-06-09
+16 páginas totales confirmadas (12 landings SEO + 4 generales). Landing tirzepatida-mexico creada con HTML completo (mismo patrón que semaglutida). WhatsApp eliminado de todas las landings. Aviso de privacidad reescrito desde cero (LFPDPPP, telemedicina, 10 secciones). Nuevas herramientas en agente SEO: create_ptm_page y delete_ptm_page. Pendiente: razón social en aviso de privacidad, diseño Elementor, SEO y cross-links.
+
+**Actualización 2026-06-09 (cierre):** Aviso de privacidad completo con razón social y domicilio fiscal. Cross-links PTM ↔ PYS activados. Pendiente: diseño Elementor y SEO de las 12 landings.
