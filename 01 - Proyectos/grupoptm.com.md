@@ -43,7 +43,7 @@ Cada landing termina con CTA → [[PTM Novo]] en Railway.
 - [x] Instalar Rank Math
 - [x] Crear Application Password en WP admin
 - [x] Agregar en Railway (ecommerce-agent): PTM_WP_USER, PTM_WP_PASSWORD, PTM_URL=https://grupoptm.com
-- [ ] Crear las 5 páginas (título + slug)
+- [ ] Crear las 5 páginas via agente (create_ptm_page ya disponible en Railway)
 - [ ] Verificar con get_ptm_pages() desde el agente SEO
 - [ ] Diseñar cada landing en Elementor
 - [ ] Optimizar SEO de las 5 landings via agente

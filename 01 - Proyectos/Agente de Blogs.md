@@ -1,12 +1,12 @@
 ---
-tags: [proyecto, pys, agente, blogs, seo, railway]
+tags: [proyecto, pys, grupoptm, agente, blogs, seo, railway]
 estado: Activo
-ruta: C:\Users\gabom\agente-blogs\
+ruta: C:\Users\Fam. Gavito Llernadi\agente-blogs\
 ---
 
 # Agente de Blogs
 
-> Publica 4 blogs/semana en peptidosysuplementos.mx automáticamente.
+> Publica 4 blogs/semana en **peptidosysuplementos.mx** y **grupoptm.com** automáticamente.
 
 ## Descripción
 
@@ -50,14 +50,28 @@ agente-blogs/
 - **Nunca mezclar** `/image` y `/edit` en el mismo comando
 - Siempre `rank_math_title` + `rank_math_description` (no Yoast)
 
+## Sitios Configurados
+
+| site_key | Sitio | Nicho |
+|----------|-------|-------|
+| `peptidosysuplementos` | peptidosysuplementos.mx | Péptidos deportivos |
+| `grupoptm` | grupoptm.com | Telemedicina péptidos MX |
+
 ## Variables de Entorno
 
 ```env
+# PYS
 SITE1_WP_URL=https://peptidosysuplementos.mx
 SITE1_WP_USER=usuario
 SITE1_WP_PASSWORD=password
+# PTM
+SITE2_WP_URL=https://grupoptm.com
+SITE2_WP_USER=usuario
+SITE2_WP_PASSWORD=password
+# Compartidas
 ANTHROPIC_API_KEY=sk-ant-xxx
 UNSPLASH_ACCESS_KEY=access_key
+SEO_AGENT_URL=https://web-production-3743c.up.railway.app
 ```
 
 ## Comandos
