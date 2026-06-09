@@ -51,8 +51,44 @@
 ### Stop Hook corregido
 - `settings.json`: PowerShell escribe en daily note de Obsidian al final de cada respuesta
 
+---
+
+## Sesión 2 — Landings, Diseño y Estándares SEO
+
+### PACS-RIS (ID 137) — optimización via API
+- `rank_math_title`: "PACS RIS para Radiología | VIRA Raditech México" (49 chars)
+- `rank_math_description`: 150 chars con CTA
+- `rank_math_focus_keyword`: "sistema PACS RIS Mexico" ✅
+- Herramienta `focus_keyword` agregada a `update_raditech_page` y `update_raditech_post`
+- Pendiente en Elementor (no se puede vía API): H1, links internos, links externos, Schema SoftwareApplication
+
+### Nueva herramienta: `create_raditech_page`
+- Crea páginas Gutenberg con rank_math vía PATCH post-creación
+- Endpoint directo `/raditech-page-update` para HTML grande (bypass agente)
+
+### Landing PACS-Teleradiología (ID 862)
+- URL: https://raditech.mx/pacs-teleradiologia/
+- Diseño replicado del estilo PACS-RIS: navy + naranja, 9 secciones
+- SEO: title "PACS Teleradiología en México | VIRA Raditech" · focus_keyword "PACS teleradiología México"
+- 6 FAQs + JSON-LD FAQPage · 5 links internos · 4 links externos de autoridad
+- Indexación GSC solicitada ✅
+
+### Estándares SEO y diseño guardados en SYSTEM prompt del agente SEO (3743c)
+Paleta: `#0b1826` navy · `#112236` card · `#e8922a` naranja
+Estructura 9 secciones: Hero → Navbar → Software → Características (01-05) → Innovación → ROI → CTA → FAQ → Footer links
+Parámetros fijos:
+- seo_title: ≤55 chars — "Keyword | VIRA Raditech México"
+- meta_description: 150-160 chars con CTA
+- focus_keyword: sin marca
+- WhatsApp: https://wa.me/525537959441
+- Links internos: /pacs-ris/, /teleradiologia-de-alta-especialidad/, /sistema-de-informacion-hospitalaria-his/, /monitores-grado-medico/, /blog/
+- Links externos: rsna.org, acr.org, dicom.nema.org, ihe.net, himss.org
+- FAQ JSON-LD siempre (mínimo 5 preguntas)
+- gsc_request_indexing post-publish automático
+
 ## Pendientes
 - Desplegar `social-video-raditech` en Railway
 - Agregar Service Account GSC a raditech.mx como Owner
-- Solicitar indexación Google de nuevos posts
-- Verificar rank_math fix publicando nuevo blog
+- Editar PACS-RIS en Elementor: H1 → "Sistema PACS-RIS para Radiología en México", links internos, links externos, Schema SoftwareApplication
+- Resolver canibalización Teleradiología (páginas 118 vs 353)
+- Eliminar spam link RolexReplica.cx en /teleradiologia/ (ID 118) — usuario lo hace manualmente
