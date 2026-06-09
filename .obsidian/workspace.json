@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Home.md",
+                "file": "2026-06-08.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Home"
+              "title": "2026-06-08"
             }
           }
         ]
@@ -94,17 +94,17 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Home.md",
+                "file": "2026-06-08.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": false
+                "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes de Home"
+              "title": "Enlaces entrantes de 2026-06-08"
             }
           },
           {
@@ -185,37 +185,39 @@
   },
   "active": "4062f1b461e30063",
   "lastOpenFiles": [
-    "03 - Referencia/Obsidian CLI — Referencia.md",
-    "Home.md",
+    "conflict-files-obsidian-git.md",
     "2026-06-08.md",
-    "01 - Proyectos/Agente SEO GSC.md",
-    "04 - Sesiones/2026-06-08 — PTM-NOVO y grupoptm Actualizaciones.md.tmp.7688.a5ce45b8a5a5",
-    "page42985_updated_raw.txt",
-    "page42985.json",
-    "04 - Sesiones/2026-06-08 — PTM-NOVO y grupoptm Actualizaciones.md",
-    "page2_content.html",
-    "page2_content.html.tmp.7688.e90e2fdcb456",
-    "04 - Sesiones/2026-06-08 — Plan Maestro PTM.md",
-    "04 - Sesiones/2026-06-08 — Obsidian Vault Setup.md",
     "style_block.txt",
     "page42887.json",
+    "page2_content.html",
     "CUsersFam. Gavito LlernadiObsidian-vaultpage42887.json",
-    "04 - Sesiones/2026-06-08 — PTM-NOVO y grupoptm Actualizaciones.md.tmp.7688.1b90903ee547",
-    "02 - Contexto/Ecosistema PTM-PYS.md",
-    "04 - Sesiones/2026-06-08 — Agente Blogs PTM.md.tmp.1092.323f57f334b0",
+    "04 - Sesiones/2026-06-08 — PTM-NOVO y grupoptm Actualizaciones.md",
+    "04 - Sesiones/2026-06-08 — Fixes Agentes PYS y PTM.md",
     "04 - Sesiones/2026-06-08 — Agente Blogs PTM.md",
+    "04 - Sesiones/2026-06-08 — Obsidian Vault Setup.md",
+    "Home.md",
+    "04 - Sesiones/2026-06-08 — Plan Maestro PTM.md",
+    "04 - Sesiones/2026-06-08 — grupoptm.com Activación.md",
+    "01 - Proyectos/PTM Novo.md",
     "04 - Sesiones/2026-06-08 — Agente SEO PTM Cross-linking.md",
     "04 - Sesiones/2026-06-08 — Cerebro Obsidian.md",
-    "04 - Sesiones/2026-06-08 — grupoptm.com Activación.md",
+    "04 - Sesiones/2026-06-08 — grupoptm.com Activación.md.tmp.4052.2721e79e35ab",
     "01 - Proyectos/grupoptm.com.md",
+    "04 - Sesiones/2026-06-08 — Plan Maestro PTM.md.tmp.4052.49352658ef2f",
+    "01 - Proyectos/Agente SEO GSC.md.tmp.4052.73e4d2102bcd",
+    "01 - Proyectos/grupoptm.mx.md.tmp.4052.7db30047ef91",
+    "04 - Sesiones/2026-06-08 — Cerebro Obsidian.md.tmp.4052.cf8e0a0ee1a3",
     "01 - Proyectos/grupoptm.mx.md",
+    "01 - Proyectos/grupoptm.mx.md.tmp.4052.d257518901a6",
+    "01 - Proyectos/Agente SEO GSC.md",
+    "02 - Contexto/Ecosistema PTM-PYS.md",
     "01 - Proyectos/Ecommerce Agent.md",
     "02 - Contexto/Stack Compartido.md",
     "01 - Proyectos/Chatbot PYS.md",
-    "01 - Proyectos/PTM Novo.md",
     "01 - Proyectos/AutoDiag Pro.md",
     "01 - Proyectos/Agente de Blogs.md",
     "01 - Proyectos/Gloria IEM AI.md",
-    "01 - Proyectos/Servidor Licencias AutoDiag.md"
+    "01 - Proyectos/Servidor Licencias AutoDiag.md",
+    "03 - Referencia/Obsidian CLI — Referencia.md"
   ]
 }
