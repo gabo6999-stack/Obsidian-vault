@@ -70,3 +70,10 @@ El agente ahora tiene acceso bidireccional a **grupoptm.com** (WordPress):
 
 ## Sesión 2026-06-08
 Mergeó branch `claude/new-session-jthvC` a main. PTM cross-linking deployado en Railway. WordPress en grupoptm.com: Hostinger instalado, faltan plugins JWT Auth y Rank Math + credenciales Railway.
+
+
+
+---
+
+## Sesión 2026-06-13 — Redirects 301 via _wp_old_slug
+Descubierto que el mecanismo correcto para redirects en raditech.mx es _wp_old_slug (nativo WP), no Rank Math REST API. Se configuraron 8 slugs antiguos en las páginas destino correctas. Pendiente: verificar que funcionen tras purge de LiteSpeed Cache.
