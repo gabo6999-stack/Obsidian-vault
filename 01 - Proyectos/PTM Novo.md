@@ -72,3 +72,9 @@ Paciente → Quiz → Pago ($500 MXN) → Video-consulta → Receta → Péptido
 
 ## Sesión 2026-06-08 — Plan Maestro grupoptm.mx
 Se definió el plan completo para construir grupoptm.mx (sitio WordPress marketing/SEO). Rol claro: grupoptm.mx atrae tráfico orgánico con 5 landings SEO, la app Railway es donde el cliente actúa. Se identificó bug: PTM_URL en agente tiene default grupoptm.com, debe ser grupoptm.mx via variable Railway. Próximo paso crítico: instalar JWT Auth + Rank Math en WP y agregar 3 variables en Railway (PTM_WP_USER, PTM_WP_PASSWORD, PTM_URL).
+
+
+---
+
+## Nota técnica 2026-06-13 — SEO WordPress
+En Raditech se completó auditoría SEO 100/100. Técnicas reutilizables para grupoptm.com: slug cycling para redirects 301, cookie+nonce para Rank Math REST API, purge LiteSpeed via admin panel. Ver [[2026-06-13 - Raditech SEO Score 100]].

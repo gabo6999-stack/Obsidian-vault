@@ -43,3 +43,10 @@ El chat del agente SEO timoueó con HTML de 30KB+. Flujo alternativo validado:
 
 ## Sesión 2026-06-10
 Eliminadas 3 secciones de la landing 894 (teleradiología tomografía cardiaca): CTA "Sin costo de instalación", y 2 FAQs (tiempo de reporte + post-procesamiento 3D). JSON-LD schema también limpiado. HTML: 32,777 → 29,355 chars.
+
+
+
+---
+
+## Sesión 2026-06-13 — SEO 100/100
+Score SEO llevado de 86.5 a 100/100 (52/52 checks). 9 redirects 301 activos sin loops. Title homepage corregido (56c), alt texto logo actualizado, caché LiteSpeed purgado. Técnica clave: slug cycling via REST API para que Rank Math genere redirects correctamente. Ver [[2026-06-13 - Raditech SEO Score 100]].

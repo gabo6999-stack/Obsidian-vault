@@ -40,3 +40,10 @@ Tienda WooCommerce con enfoque SEO que vende péptidos y suplementos. Es el braz
 ## Estado
 
 🟢 Operando — tienda activa con múltiples agentes corriendo en Railway.
+
+
+
+---
+
+## Nota técnica 2026-06-13 — Redirects 301 y SEO WP
+En Raditech se perfeccionó técnica para redirects 301 en WordPress via slug cycling REST API (Rank Math auto-genera la entrada). También: cookie+nonce > JWT para Rank Math REST, purge LiteSpeed via nonce admin panel. Estas técnicas aplican igual en peptidosysuplementos.mx. Ver [[2026-06-13 - Raditech SEO Score 100]].
