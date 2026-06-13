@@ -35,3 +35,8 @@ proyecto: Raditech + Agente SEO
 - [ ] Crear contenido no-branded: sistema pacs ris mexico, teleradiologia 24/7
 - [ ] Remover referencias a Grupo PTM en SEO title de la home de Raditech
 - [ ] Mejorar gsc_inspect_url para soportar Raditech (parametro site_url opcional)
+
+
+---
+
+**MOC:** [[MOC - Raditech]] | [[MOC - SEO]]

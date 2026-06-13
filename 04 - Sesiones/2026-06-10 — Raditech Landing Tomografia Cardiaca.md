@@ -30,3 +30,9 @@ proyecto: Raditech
 - [ ] Optimizar SEO landing 894: agregar meta title + meta description en Rank Math
 - [ ] Revisar landings pendientes: 892 (resonancia cardiovascular), 871, 881, 879
 - [ ] Nota: página 892 `/teleradiologia-resonancia-cardiovascular/` ya está publicada (confirmado esta sesión)
+
+
+
+---
+
+**MOC:** [[MOC - Raditech]] | [[MOC - SEO]]

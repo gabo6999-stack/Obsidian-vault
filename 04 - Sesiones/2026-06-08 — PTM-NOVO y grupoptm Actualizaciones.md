@@ -81,3 +81,9 @@ Solicitar indexación en Google Search Console para estas URLs:
 
 ## Tags
 #PTM #PTM-NOVO #grupoptm #SEO #telemedicina #peptidos #GSC
+
+
+
+---
+
+**MOC:** [[MOC - PTM y PYS]]

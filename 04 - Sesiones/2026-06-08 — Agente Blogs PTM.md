@@ -35,3 +35,9 @@ proyecto: Agente de Blogs
 ## Pendiente
 
 - [ ] Publicar 1 blog de prueba en grupoptm y verificar que SEO se aplique automáticamente
+
+
+
+---
+
+**MOC:** [[MOC - PTM y PYS]]

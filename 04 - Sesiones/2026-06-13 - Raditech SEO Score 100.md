@@ -54,3 +54,9 @@ relacionado: [[Raditech]], [[PYS Ecommerce]], [[PTM Novo]]
 - [ ] Meta desc cortas pendientes: Sistema PACS-RIS (31c), Contacto (65c), FAQ (39c) — el theme muestra el excerpt, no rank_math_description — requiere fix de theme o usar rank_math_description correctamente
 - [ ] Solicitar indexación en Google Search Console para las 9 URLs redirigidas
 - [ ] Monitorear en GSC que los redirects se indexen correctamente (2-4 semanas)
+
+
+
+---
+
+**MOC:** [[MOC - Raditech]] | [[MOC - SEO]]

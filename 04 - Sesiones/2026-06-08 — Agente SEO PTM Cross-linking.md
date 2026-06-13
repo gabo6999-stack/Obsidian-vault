@@ -37,3 +37,9 @@ proyecto: Agente SEO
 - [ ] Agregar PTM_WP_USER y PTM_WP_PASSWORD en Railway (ecommerce-agent)
 - [ ] Verificar que el agente lee/escribe correctamente en grupoptm.com
 - [ ] Crear landing pages SEO iniciales en grupoptm.com (pérdida de peso, longevidad, rendimiento, salud hormonal)
+
+
+
+---
+
+**MOC:** [[MOC - SEO]] | [[MOC - PTM y PYS]]

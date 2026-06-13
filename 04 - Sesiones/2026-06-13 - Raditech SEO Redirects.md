@@ -29,3 +29,9 @@ proyecto: Raditech SEO
 - [ ] Corregir teleradiologia — encontrar qué page tiene _wp_old_slug=teleradiologia y sobrescribirlo con el correcto
 - [ ] Correr auditoría SEO completa con graficas (fue solicitada, no completada aún)
 - [ ] Revisar 2 imágenes sin alt en homepage (son widgets Elementor, no en media library)
+
+
+
+---
+
+**MOC:** [[MOC - Raditech]] | [[MOC - SEO]]
