@@ -42,4 +42,4 @@ proyecto: grupoptm.com
 
 ---
 
-**MOC:** [[MOC - PTM y PYS]]
+**MOC:** [[MOC - Ecosistema PTM-PYS]]

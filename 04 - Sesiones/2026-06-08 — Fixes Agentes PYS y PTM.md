@@ -50,4 +50,4 @@ proyecto: Agente de Blogs / Ecommerce Agent
 
 ---
 
-**MOC:** [[MOC - PTM y PYS]]
+**MOC:** [[MOC - Ecosistema PTM-PYS]]

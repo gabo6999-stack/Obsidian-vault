@@ -60,3 +60,9 @@ obsidian tags vault=Obsidian
 
 ## Sesion 2026-06-08
 Vault cerebro configurado desde cero: 14 notas de proyectos, CLI activo, /gs extendido para guardar en Obsidian, hook Stop configurado.
+
+
+## MOCs
+- [[MOC - Raditech]]
+- [[MOC - Ecosistema PTM-PYS]]
+- [[MOC - SEO]]

@@ -42,4 +42,4 @@ proyecto: Agente SEO
 
 ---
 
-**MOC:** [[MOC - SEO]] | [[MOC - PTM y PYS]]
+**MOC:** [[MOC - SEO]] | [[MOC - Ecosistema PTM-PYS]]

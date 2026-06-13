@@ -40,4 +40,4 @@ proyecto: Agente de Blogs
 
 ---
 
-**MOC:** [[MOC - PTM y PYS]]
+**MOC:** [[MOC - Ecosistema PTM-PYS]]
