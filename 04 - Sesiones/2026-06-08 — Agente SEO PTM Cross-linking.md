@@ -1,5 +1,10 @@
 ---
-tags: [sesion, agente-seo, peptidosysuplementos, grupoptm, 2026-06]
+tags:
+  - sesion
+  - agente-seo
+  - peptidosysuplementos
+  - grupoptm
+  - 2026-06
 fecha: 2026-06-08 01:48
 proyecto: Agente SEO
 ---
