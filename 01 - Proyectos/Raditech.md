@@ -62,3 +62,9 @@ Identificada firma vieja en posts del blog: 'Dr. Antonio Gavito Hernandez - Medi
 
 ## Sesión 2026-06-14
 Revisada firma 'Médico Radiólogo / PACS-RIS' en posts de blog. Usuario decidió mantenerla — no se elimina.
+
+
+---
+
+## Sesión 2026-06-14 — Redirects 301 (corrección)
+**Corrección importante:** la nota "SEO 100/100 / 9 redirects activos" del 13-jun era inexacta — 7 de 8 redirects daban 404. Causa: `_wp_old_slug` es meta protegido y la REST API ignoraba los writes. Solución: snippet WPCode PHP "Redirects 301 old-slugs Raditech" (ID 932) con `template_redirect` + mapa + `wp_safe_redirect(...,301)`. **8/8 verificados (anónimo y logueado)**. También: eliminado el snippet roto 931 que imprimía PHP como texto en el sitio, y purgada la caché LiteSpeed. Gotchas: WPCode requiere 2.º guardado para ejecutar; la caché privada de LiteSpeed engaña al admin. Ver [[2026-06-14 — Raditech]].

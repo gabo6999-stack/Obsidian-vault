@@ -23,10 +23,13 @@ proyecto: Obsidian — Cerebro Principal
 - Home como hub central garantiza que el grafo tenga un nodo raíz visible
 
 ## Estructura final
+(raíz del vault)/
+  MOC SEO.md          ← MOC transversal, en la raíz como índice central
 04 - Sesiones/
   MOC - Raditech.md
   MOC - Ecosistema PTM-PYS.md
-  MOC - SEO.md
+
+> **Actualización 2026-06-14:** el MOC SEO se unificó en un único archivo `MOC SEO.md` en la raíz del vault (antes había duplicados: `04 - Sesiones/MOC - SEO.md` vacío/índice y una nota de sesión `2026-06-14 — MOC SEO.md`). Todo el contenido se fusionó y los links `[[MOC - SEO]]` se reapuntaron a `[[MOC SEO]]`.
 
 ## Cómo usar en futuras sesiones
 Al inicio de sesión de Raditech: revisar [[MOC - Raditech]]
