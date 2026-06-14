@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f6ff9975c5d72c7b",
+        "id": "42f0c1b3de3ea2e7",
         "type": "tabs",
         "children": [
           {
-            "id": "4062f1b461e30063",
+            "id": "389f56a545eb12d8",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -178,17 +178,26 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4062f1b461e30063",
+  "active": "389f56a545eb12d8",
   "lastOpenFiles": [
+    "04 - Sesiones/2026-06-13 - Obsidian MOCs.md.tmp.5828.9fc4c8e9faef",
+    "04 - Sesiones/2026-06-09 - Raditech GSC.md.tmp.5828.fedfb26190e9",
+    "04 - Sesiones/2026-06-13 - Raditech SEO Score 100.md.tmp.5828.de689101a23a",
+    "04 - Sesiones/2026-06-13 - Raditech SEO Redirects.md.tmp.5828.da0e7d1b63f2",
+    "04 - Sesiones/2026-06-08 — Agente SEO PTM Cross-linking.md.tmp.5828.18a75d321ca9",
+    "Home.md.tmp.5828.9aaae3391c6c",
+    "MOC SEO.md.tmp.5828.811f01dbb1cb",
+    "2026-06-08.md",
+    "04 - Sesiones/2026-06-13 Fix avatar author box grupoptm.md",
+    "04 - Sesiones/MOC - SEO.md",
+    "Sin título.canvas",
+    "MOC SEO.md",
     "2026-06-14.md",
     "04 - Sesiones/2026-06-14 — MOC SEO.md",
-    "04 - Sesiones/2026-06-13 Fix avatar author box grupoptm.md",
     "04 - Sesiones/2026-06-13 SEO grupoptm Raditech.md",
-    "04 - Sesiones/MOC - SEO.md",
     "04 - Sesiones/2026-06-13 - Obsidian MOCs.md",
     "2026-06-09.md",
     "04 - Sesiones/2026-06-08 — Obsidian Vault Setup.md",
-    "2026-06-08.md",
     "2026-06-13.md",
     "2026-06-10.md",
     "PAGINA RECLUTAMIENTO DE MEDICOS.md",
@@ -205,16 +214,8 @@
     "04 - Sesiones/2026-06-09 — grupoptm.com.md",
     "04 - Sesiones/2026-06-09 — Raditech Agentes y Blog Setup.md",
     "04 - Sesiones/2026-06-09 — Raditech Agentes y Blog Setup.md.tmp.30748.9389be6cf25d",
-    "conflict-files-obsidian-git.md",
     "style_block.txt",
     "page42887.json",
-    "page2_content.html",
-    "CUsersFam. Gavito LlernadiObsidian-vaultpage42887.json",
-    "04 - Sesiones/2026-06-08 — PTM-NOVO y grupoptm Actualizaciones.md",
-    "04 - Sesiones/2026-06-08 — grupoptm.com Activación.md.tmp.4052.2721e79e35ab",
-    "04 - Sesiones/2026-06-08 — Plan Maestro PTM.md.tmp.4052.49352658ef2f",
-    "01 - Proyectos/Agente SEO GSC.md.tmp.4052.73e4d2102bcd",
-    "01 - Proyectos/grupoptm.mx.md.tmp.4052.7db30047ef91",
-    "04 - Sesiones/2026-06-08 — Cerebro Obsidian.md.tmp.4052.cf8e0a0ee1a3"
+    "page2_content.html"
   ]
 }

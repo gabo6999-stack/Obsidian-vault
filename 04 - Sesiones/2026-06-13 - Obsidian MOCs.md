@@ -10,7 +10,7 @@ proyecto: Obsidian — Cerebro Principal
 - Creados 3 MOCs en 04 - Sesiones para organizar sesiones por tema:
   - [[MOC - Raditech]] — 5 sesiones de raditech.mx, proyecto independiente
   - [[MOC - Ecosistema PTM-PYS]] — 7 sesiones de PTM Novo + PYS + grupoptm.com unificados
-  - [[MOC - SEO]] — técnicas SEO transversales (Raditech + PTM + PYS)
+  - [[MOC SEO]] — técnicas SEO transversales (Raditech + PTM + PYS)
 - Raditech separado explícitamente de PTM-PYS para evitar confusión
 - MOC antiguo "PTM y PYS" eliminado y reemplazado por "Ecosistema PTM-PYS"
 - Home.md linkeado a los 3 MOCs como hub central del grafo
@@ -31,4 +31,4 @@ proyecto: Obsidian — Cerebro Principal
 ## Cómo usar en futuras sesiones
 Al inicio de sesión de Raditech: revisar [[MOC - Raditech]]
 Al inicio de sesión de PTM/PYS: revisar [[MOC - Ecosistema PTM-PYS]]
-Para técnicas SEO en cualquier sitio: revisar [[MOC - SEO]]
+Para técnicas SEO en cualquier sitio: revisar [[MOC SEO]]

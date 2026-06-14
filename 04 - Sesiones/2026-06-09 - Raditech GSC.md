@@ -39,6 +39,6 @@ proyecto: Raditech + Agente SEO
 
 ---
 
-**MOC:** [[MOC - Raditech]] | [[MOC - SEO]]
+**MOC:** [[MOC - Raditech]] | [[MOC SEO]]
 
 **MOC adicional:** [[MOC - Ecosistema PTM-PYS]]

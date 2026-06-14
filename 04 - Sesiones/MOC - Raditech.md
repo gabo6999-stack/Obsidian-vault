@@ -18,4 +18,4 @@ No confundir con el ecosistema PTM-PYS — son proyectos separados.
 [[Raditech]]
 
 ## Tecnicas SEO reutilizables
-[[MOC - SEO]]
+[[MOC SEO]]

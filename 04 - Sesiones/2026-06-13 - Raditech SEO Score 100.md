@@ -59,4 +59,4 @@ relacionado: [[Raditech]], [[PYS Ecommerce]], [[PTM Novo]]
 
 ---
 
-**MOC:** [[MOC - Raditech]] | [[MOC - SEO]]
+**MOC:** [[MOC - Raditech]] | [[MOC SEO]]

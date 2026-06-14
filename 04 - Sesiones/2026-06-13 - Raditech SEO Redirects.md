@@ -34,4 +34,4 @@ proyecto: Raditech SEO
 
 ---
 
-**MOC:** [[MOC - Raditech]] | [[MOC - SEO]]
+**MOC:** [[MOC - Raditech]] | [[MOC SEO]]

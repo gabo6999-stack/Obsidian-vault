@@ -65,4 +65,4 @@ Vault cerebro configurado desde cero: 14 notas de proyectos, CLI activo, /gs ext
 ## MOCs
 - [[MOC - Raditech]]
 - [[MOC - Ecosistema PTM-PYS]]
-- [[MOC - SEO]]
+- [[MOC SEO]]
