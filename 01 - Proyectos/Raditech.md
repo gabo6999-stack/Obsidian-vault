@@ -56,3 +56,9 @@ Score SEO llevado de 86.5 a 100/100 (52/52 checks). 9 redirects 301 activos sin 
 
 ## Sesion 2026-06-13
 Identificada firma vieja en posts del blog: 'Dr. Antonio Gavito Hernandez - Medico Radiologo - Especialista PACS-RIS'. Pendiente eliminarla de todos los posts.
+
+
+---
+
+## Sesión 2026-06-14
+Revisada firma 'Médico Radiólogo / PACS-RIS' en posts de blog. Usuario decidió mantenerla — no se elimina.

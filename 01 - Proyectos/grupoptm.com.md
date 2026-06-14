@@ -82,3 +82,9 @@ Plugins instalados (JWT Auth, Rank Math), variables Railway configuradas, conexi
 
 ## Sesion 2026-06-13 (23:50)
 Fix bug avatar en PTM Custom v2.4: esc_js() cambiado a wp_json_encode(). Author box completamente funcional en posts.
+
+
+---
+
+## Sesión 2026-06-14
+Eliminados scripts temporales de diagnóstico (ptm-diag.php, ptm-fix2.php, ptm-dump.php) de /public_html/ via hook admin_init temporal en ptm-custom.php. Plugin limpio en v2.4. Firma Raditech se mantiene por decisión del usuario.
