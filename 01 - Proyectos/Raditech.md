@@ -50,3 +50,9 @@ Eliminadas 3 secciones de la landing 894 (teleradiología tomografía cardiaca):
 
 ## Sesión 2026-06-13 — SEO 100/100
 Score SEO llevado de 86.5 a 100/100 (52/52 checks). 9 redirects 301 activos sin loops. Title homepage corregido (56c), alt texto logo actualizado, caché LiteSpeed purgado. Técnica clave: slug cycling via REST API para que Rank Math genere redirects correctamente. Ver [[2026-06-13 - Raditech SEO Score 100]].
+
+
+---
+
+## Sesion 2026-06-13
+Identificada firma vieja en posts del blog: 'Dr. Antonio Gavito Hernandez - Medico Radiologo - Especialista PACS-RIS'. Pendiente eliminarla de todos los posts.
