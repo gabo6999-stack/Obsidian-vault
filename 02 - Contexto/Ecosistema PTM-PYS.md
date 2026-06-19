@@ -31,6 +31,12 @@ Paciente
 - **PYS:** farmacia online de péptidos y suplementos
 - Médicos son contratistas independientes
 
+> [!important] Separación pública PTM ↔ PYS (2026-06-19)
+> El sitio **grupoptm.com es público y 100% telemedicina**: **no enlaza** a PYS (compliance Meta Andromeda).
+> La derivación a la farmacia (PYS/WooCommerce) ocurre **dentro de la consulta médica**, no en el sitio público.
+> Internamente el ecosistema sigue igual; solo cambia que el embudo público no muestra la tienda.
+> Ver: [[grupoptm.com — Legitimización (retiro funnel PYS)]]
+
 ## Diferenciadores vs Competencia MX
 
 1. Médicos especializados en péptidos (no generales)
