@@ -1,5 +1,10 @@
 ---
-tags: [sesion, agente-seo, peptidosysuplementos, grupoptm, 2026-06]
+tags:
+  - sesion
+  - agente-seo
+  - peptidosysuplementos
+  - grupoptm
+  - 2026-06
 fecha: 2026-06-08 01:48
 proyecto: Agente SEO
 ---
@@ -32,3 +37,9 @@ proyecto: Agente SEO
 - [ ] Agregar PTM_WP_USER y PTM_WP_PASSWORD en Railway (ecommerce-agent)
 - [ ] Verificar que el agente lee/escribe correctamente en grupoptm.com
 - [ ] Crear landing pages SEO iniciales en grupoptm.com (pérdida de peso, longevidad, rendimiento, salud hormonal)
+
+
+
+---
+
+**MOC:** [[MOC SEO]] | [[MOC - Ecosistema PTM-PYS]]

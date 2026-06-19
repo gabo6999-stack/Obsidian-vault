@@ -1,0 +1,37 @@
+---
+tags: [sesion, obsidian, moc, 2026-06]
+fecha: 2026-06-13 14:36
+proyecto: Obsidian — Cerebro Principal
+---
+
+# Sesión 2026-06-13 — Organización MOCs Obsidian
+
+## Qué se hizo
+- Creados 3 MOCs en 04 - Sesiones para organizar sesiones por tema:
+  - [[MOC - Raditech]] — 5 sesiones de raditech.mx, proyecto independiente
+  - [[MOC - Ecosistema PTM-PYS]] — 7 sesiones de PTM Novo + PYS + grupoptm.com unificados
+  - [[MOC SEO]] — técnicas SEO transversales (Raditech + PTM + PYS)
+- Raditech separado explícitamente de PTM-PYS para evitar confusión
+- MOC antiguo "PTM y PYS" eliminado y reemplazado por "Ecosistema PTM-PYS"
+- Home.md linkeado a los 3 MOCs como hub central del grafo
+- Sesiones 2026-06-09 cruzadas entre ambos clusters
+- Todas las sesiones actualizadas con link a su MOC correspondiente
+
+## Decisiones técnicas
+- MOC por ecosistema de negocio, no por tecnología — Raditech es cliente externo, PTM-PYS es ecosistema propio
+- MOC SEO es transversal (no pertenece a un solo proyecto) porque las técnicas son reutilizables entre sitios
+- Home como hub central garantiza que el grafo tenga un nodo raíz visible
+
+## Estructura final
+(raíz del vault)/
+  MOC SEO.md          ← MOC transversal, en la raíz como índice central
+04 - Sesiones/
+  MOC - Raditech.md
+  MOC - Ecosistema PTM-PYS.md
+
+> **Actualización 2026-06-14:** el MOC SEO se unificó en un único archivo `MOC SEO.md` en la raíz del vault (antes había duplicados: `04 - Sesiones/MOC - SEO.md` vacío/índice y una nota de sesión `2026-06-14 — MOC SEO.md`). Todo el contenido se fusionó y los links `[[MOC - SEO]]` se reapuntaron a `[[MOC SEO]]`.
+
+## Cómo usar en futuras sesiones
+Al inicio de sesión de Raditech: revisar [[MOC - Raditech]]
+Al inicio de sesión de PTM/PYS: revisar [[MOC - Ecosistema PTM-PYS]]
+Para técnicas SEO en cualquier sitio: revisar [[MOC SEO]]

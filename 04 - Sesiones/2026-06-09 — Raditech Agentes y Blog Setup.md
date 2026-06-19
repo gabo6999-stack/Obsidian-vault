@@ -92,3 +92,11 @@ Parámetros fijos:
 - Editar PACS-RIS en Elementor: H1 → "Sistema PACS-RIS para Radiología en México", links internos, links externos, Schema SoftwareApplication
 - Resolver canibalización Teleradiología (páginas 118 vs 353)
 - Eliminar spam link RolexReplica.cx en /teleradiologia/ (ID 118) — usuario lo hace manualmente
+
+
+
+---
+
+**MOC:** [[MOC - Raditech]] | [[MOC SEO]]
+
+**MOC adicional:** [[MOC - Ecosistema PTM-PYS]]

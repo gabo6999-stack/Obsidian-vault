@@ -38,3 +38,8 @@ proyecto: grupoptm.com
 - [ ] Diseñar cada landing en Elementor
 - [ ] Optimizar SEO de las 5 landings via agente (update_ptm_page)
 - [ ] Activar cross-links PTM -> PYS y PYS -> PTM
+
+
+---
+
+**MOC:** [[MOC - Ecosistema PTM-PYS]]

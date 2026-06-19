@@ -45,3 +45,9 @@ proyecto: Agente de Blogs / Ecommerce Agent
 - Preview antes de publicar (borrador para aprobar antes de que salga al blog)
 - Optimización automática de productos nuevos en PYS
 - Agente Instagram → bloqueado por API de Meta
+
+
+
+---
+
+**MOC:** [[MOC - Ecosistema PTM-PYS]]

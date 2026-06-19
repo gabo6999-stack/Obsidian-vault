@@ -50,3 +50,10 @@ Convenciones Elementor (ambos sitios):
 
 - Sitios usan **Rank Math** (no Yoast) — campos: `rank_math_title`, `rank_math_description`
 - `PTM_URL` default en código es `https://grupoptm.com` — correcto, no requiere variable Railway explícita
+
+
+
+---
+
+## Sesion 2026-06-09 - Raditech GSC
+Token OAuth separado (RADITECH_GSC_REFRESH_TOKEN) configurado en Railway. Funciones gsc_raditech_* desbloqueadas. Analisis GSC ejecutado: branded keywords dominan, 4 redirects 301 activos en URLs viejas, landing hospital-elipse retirada. Sistema-his-medsi pendiente indexacion.
