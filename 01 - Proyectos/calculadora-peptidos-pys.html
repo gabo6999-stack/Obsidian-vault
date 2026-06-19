@@ -1,0 +1,316 @@
+<!--
+  Calculadora de Reconstitución de Péptidos — Péptidos y Suplementos MX
+  peptidosysuplementos.mx
+  ----------------------------------------------------------------------
+  Widget autocontenido (HTML + CSS + JS en un solo bloque).
+  Cómo embeber en WordPress/Elementor:
+    1. Editar la página en Elementor.
+    2. Arrastrar un widget "HTML".
+    3. Pegar TODO este archivo dentro del widget.
+    4. Actualizar. (El diseño vive aquí, no toca el resto de Elementor.)
+  Sin dependencias externas. Funciona en cualquier tema.
+-->
+<div id="pys-pep-calc">
+  <style>
+    /* Scope todo bajo #pys-pep-calc para no chocar con el tema de WordPress */
+    #pys-pep-calc{
+      --pys-verde:#1f8a70;
+      --pys-verde-osc:#13624f;
+      --pys-acento:#7ed957;
+      --pys-tinta:#0e2a24;
+      --pys-gris:#5b6b67;
+      --pys-borde:#d8e3df;
+      --pys-fondo:#f4f9f7;
+      --pys-blanco:#ffffff;
+      --pys-alerta:#c0392b;
+      --pys-radio:14px;
+      --pys-sombra:0 10px 30px rgba(19,98,79,.12);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      color:var(--pys-tinta);
+      max-width:920px;
+      margin:0 auto;
+      box-sizing:border-box;
+      line-height:1.5;
+    }
+    #pys-pep-calc *,#pys-pep-calc *::before,#pys-pep-calc *::after{box-sizing:border-box;}
+    #pys-pep-calc .pys-card{
+      background:var(--pys-blanco);
+      border:1px solid var(--pys-borde);
+      border-radius:var(--pys-radio);
+      box-shadow:var(--pys-sombra);
+      overflow:hidden;
+    }
+    #pys-pep-calc .pys-head{
+      background:linear-gradient(135deg,var(--pys-verde),var(--pys-verde-osc));
+      color:#fff;
+      padding:22px 26px;
+    }
+    #pys-pep-calc .pys-head h2{margin:0;font-size:1.45rem;font-weight:700;letter-spacing:-.01em;}
+    #pys-pep-calc .pys-head p{margin:6px 0 0;font-size:.9rem;opacity:.9;}
+    #pys-pep-calc .pys-body{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:26px;
+      padding:26px;
+    }
+    @media(max-width:680px){
+      #pys-pep-calc .pys-body{grid-template-columns:1fr;}
+    }
+    #pys-pep-calc .pys-field{margin-bottom:16px;}
+    #pys-pep-calc label.pys-lbl{
+      display:block;font-size:.82rem;font-weight:600;margin-bottom:6px;color:var(--pys-gris);
+    }
+    #pys-pep-calc input,#pys-pep-calc select{
+      width:100%;padding:11px 12px;font-size:1rem;
+      border:1px solid var(--pys-borde);border-radius:10px;
+      background:var(--pys-fondo);color:var(--pys-tinta);
+      transition:border-color .15s,box-shadow .15s;
+    }
+    #pys-pep-calc input:focus,#pys-pep-calc select:focus{
+      outline:none;border-color:var(--pys-verde);
+      box-shadow:0 0 0 3px rgba(31,138,112,.15);background:#fff;
+    }
+    #pys-pep-calc .pys-inline{display:flex;gap:8px;}
+    #pys-pep-calc .pys-inline input{flex:1;}
+    #pys-pep-calc .pys-inline select{width:96px;flex:none;}
+    #pys-pep-calc .pys-results{
+      background:var(--pys-fondo);
+      border-radius:var(--pys-radio);
+      padding:20px;
+      display:flex;flex-direction:column;gap:14px;
+    }
+    #pys-pep-calc .pys-res-row{
+      display:flex;justify-content:space-between;align-items:baseline;
+      padding-bottom:12px;border-bottom:1px dashed var(--pys-borde);
+    }
+    #pys-pep-calc .pys-res-row:last-child{border-bottom:none;padding-bottom:0;}
+    #pys-pep-calc .pys-res-lbl{font-size:.85rem;color:var(--pys-gris);}
+    #pys-pep-calc .pys-res-val{font-size:1.25rem;font-weight:700;color:var(--pys-verde-osc);}
+    #pys-pep-calc .pys-res-val small{font-size:.7rem;font-weight:500;color:var(--pys-gris);}
+    #pys-pep-calc .pys-highlight{
+      background:linear-gradient(135deg,var(--pys-verde),var(--pys-verde-osc));
+      color:#fff;border-radius:10px;padding:14px 16px;
+    }
+    #pys-pep-calc .pys-highlight .pys-res-lbl{color:rgba(255,255,255,.85);}
+    #pys-pep-calc .pys-highlight .pys-res-val{color:#fff;font-size:1.7rem;}
+    #pys-pep-calc .pys-highlight .pys-res-val small{color:rgba(255,255,255,.85);}
+    /* Jeringa */
+    #pys-pep-calc .pys-syringe-wrap{margin-top:8px;text-align:center;}
+    #pys-pep-calc .pys-syringe-wrap svg{width:100%;height:auto;max-width:420px;}
+    #pys-pep-calc .pys-warn{
+      margin-top:10px;font-size:.82rem;color:var(--pys-alerta);
+      background:#fdecea;border:1px solid #f5c6c0;border-radius:8px;padding:8px 10px;display:none;
+    }
+    #pys-pep-calc .pys-warn.show{display:block;}
+    #pys-pep-calc .pys-foot{
+      padding:14px 26px 22px;font-size:.74rem;color:var(--pys-gris);
+      border-top:1px solid var(--pys-borde);
+    }
+    #pys-pep-calc .pys-foot strong{color:var(--pys-tinta);}
+    #pys-pep-calc .pys-foot a{color:var(--pys-verde);font-weight:600;text-decoration:none;}
+  </style>
+
+  <div class="pys-card">
+    <div class="pys-head">
+      <h2>Calculadora de Reconstitución de Péptidos</h2>
+      <p>Calcula cuánta agua bacteriostática añadir y cuántas unidades jalar en la jeringa.</p>
+    </div>
+
+    <div class="pys-body">
+      <!-- Columna de inputs -->
+      <div>
+        <div class="pys-field">
+          <label class="pys-lbl" for="pys-preset">Péptido (preselección opcional)</label>
+          <select id="pys-preset">
+            <option value="">— Personalizado —</option>
+          </select>
+        </div>
+
+        <div class="pys-field">
+          <label class="pys-lbl" for="pys-mg">Péptido en el vial (mg)</label>
+          <input id="pys-mg" type="number" min="0" step="0.1" value="10" inputmode="decimal">
+        </div>
+
+        <div class="pys-field">
+          <label class="pys-lbl" for="pys-agua">Agua bacteriostática a añadir (mL)</label>
+          <input id="pys-agua" type="number" min="0" step="0.1" value="2" inputmode="decimal">
+        </div>
+
+        <div class="pys-field">
+          <label class="pys-lbl" for="pys-dosis">Dosis deseada por aplicación</label>
+          <div class="pys-inline">
+            <input id="pys-dosis" type="number" min="0" step="1" value="250" inputmode="decimal">
+            <select id="pys-dosis-unidad">
+              <option value="mcg" selected>mcg</option>
+              <option value="mg">mg</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="pys-field">
+          <label class="pys-lbl" for="pys-jeringa">Jeringa de insulina (U-100)</label>
+          <select id="pys-jeringa">
+            <option value="30">0.3 mL — 30 unidades</option>
+            <option value="50" selected>0.5 mL — 50 unidades</option>
+            <option value="100">1.0 mL — 100 unidades</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Columna de resultados -->
+      <div class="pys-results">
+        <div class="pys-highlight">
+          <div class="pys-res-row" style="border:none;padding:0;">
+            <span class="pys-res-lbl">Jalar en la jeringa</span>
+            <span class="pys-res-val" id="pys-out-unidades">25 <small>unidades</small></span>
+          </div>
+        </div>
+
+        <div class="pys-res-row">
+          <span class="pys-res-lbl">Concentración</span>
+          <span class="pys-res-val" id="pys-out-conc">5000 <small>mcg/mL</small></span>
+        </div>
+        <div class="pys-res-row">
+          <span class="pys-res-lbl">Volumen a inyectar</span>
+          <span class="pys-res-val" id="pys-out-vol">0.25 <small>mL</small></span>
+        </div>
+        <div class="pys-res-row">
+          <span class="pys-res-lbl">Dosis por vial</span>
+          <span class="pys-res-val" id="pys-out-dosis">40 <small>aplicaciones</small></span>
+        </div>
+
+        <div class="pys-syringe-wrap">
+          <svg id="pys-syringe" viewBox="0 0 420 90" xmlns="http://www.w3.org/2000/svg" aria-label="Diagrama de jeringa"></svg>
+        </div>
+        <div class="pys-warn" id="pys-warn"></div>
+      </div>
+    </div>
+
+    <div class="pys-foot">
+      <strong>Aviso:</strong> Esta herramienta es informativa. Los péptidos son productos de investigación;
+      cualquier uso debe ser indicado y supervisado por un profesional de la salud.
+      ¿Tienes dudas? <a href="https://peptidosysuplementos.mx/contacto/" target="_blank" rel="noopener">Contáctanos</a>.
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    var $ = function(id){ return document.getElementById(id); };
+
+    // Presets comunes (mg en vial, dosis típica mcg) — editables
+    var PRESETS = [
+      {n:"BPC-157",        mg:5,  dosis:250,  u:"mcg"},
+      {n:"TB-500",         mg:5,  dosis:2500, u:"mcg"},
+      {n:"Ipamorelin",     mg:5,  dosis:300,  u:"mcg"},
+      {n:"CJC-1295 (DAC)", mg:5,  dosis:1000, u:"mcg"},
+      {n:"GHK-Cu",         mg:50, dosis:2000, u:"mcg"},
+      {n:"Semaglutida",    mg:5,  dosis:250,  u:"mcg"},
+      {n:"Tirzepatida",    mg:10, dosis:2500, u:"mcg"},
+      {n:"AOD-9604",       mg:5,  dosis:300,  u:"mcg"},
+      {n:"PT-141",         mg:10, dosis:1000, u:"mcg"},
+      {n:"MOTS-c",         mg:10, dosis:5000, u:"mcg"}
+    ];
+
+    // Poblar el selector de presets
+    var sel = $("pys-preset");
+    PRESETS.forEach(function(p,i){
+      var o = document.createElement("option");
+      o.value = i; o.textContent = p.n;
+      sel.appendChild(o);
+    });
+
+    function num(id){ var v = parseFloat($(id).value); return isNaN(v) ? 0 : v; }
+
+    function dibujarJeringa(unidades, capacidad){
+      var pct = Math.max(0, Math.min(1, unidades / capacidad));
+      var x0 = 40, x1 = 360, ancho = x1 - x0;     // cuerpo del barril
+      var fill = ancho * pct;
+      var ticks = "";
+      for(var i=0;i<=10;i++){
+        var tx = x0 + (ancho*i/10);
+        var alto = (i%5===0) ? 14 : 8;
+        ticks += '<line x1="'+tx+'" y1="30" x2="'+tx+'" y2="'+(30+alto)+'" stroke="#9fb3ad" stroke-width="1.5"/>';
+        if(i%5===0){
+          var val = Math.round(capacidad*i/10);
+          ticks += '<text x="'+tx+'" y="62" font-size="9" fill="#5b6b67" text-anchor="middle">'+val+'</text>';
+        }
+      }
+      var svg =
+        // barril
+        '<rect x="'+x0+'" y="28" width="'+ancho+'" height="22" rx="4" fill="#ffffff" stroke="#9fb3ad" stroke-width="2"/>'+
+        // líquido
+        '<rect x="'+x0+'" y="30" width="'+fill+'" height="18" rx="2" fill="#1f8a70" opacity="0.85"/>'+
+        // émbolo / vástago
+        '<rect x="'+(x0+fill)+'" y="24" width="6" height="30" rx="2" fill="#13624f"/>'+
+        '<rect x="'+(x0+fill+6)+'" y="34" width="'+Math.max(0,(x0+fill+6) < x1 ? 14 : 0)+'" height="10" fill="#13624f" opacity="0"/>'+
+        // aguja
+        '<line x1="'+x1+'" y1="39" x2="405" y2="39" stroke="#9fb3ad" stroke-width="2"/>'+
+        '<rect x="'+x1+'" y="33" width="10" height="12" rx="2" fill="#cdd9d4"/>'+
+        // tope émbolo trasero
+        '<rect x="22" y="22" width="10" height="34" rx="3" fill="#cdd9d4"/>'+
+        ticks;
+      $("pys-syringe").innerHTML = svg;
+    }
+
+    function calcular(){
+      var mg = num("pys-mg");
+      var agua = num("pys-agua");
+      var dosisVal = num("pys-dosis");
+      var dosisUnidad = $("pys-dosis-unidad").value;
+      var capacidad = parseFloat($("pys-jeringa").value);
+
+      var dosisMcg = (dosisUnidad === "mg") ? dosisVal*1000 : dosisVal;
+
+      var warn = $("pys-warn");
+      warn.className = "pys-warn";
+
+      if(mg<=0 || agua<=0 || dosisMcg<=0){
+        $("pys-out-unidades").innerHTML = "—";
+        $("pys-out-conc").innerHTML = "—";
+        $("pys-out-vol").innerHTML = "—";
+        $("pys-out-dosis").innerHTML = "—";
+        dibujarJeringa(0, capacidad);
+        return;
+      }
+
+      var concMcgMl = (mg*1000)/agua;            // mcg/mL
+      var volMl = dosisMcg/concMcgMl;            // mL por dosis
+      var unidades = volMl*100;                   // IU en jeringa U-100
+      var dosisPorVial = Math.floor((mg*1000)/dosisMcg);
+
+      $("pys-out-unidades").innerHTML = (Math.round(unidades*10)/10) + ' <small>unidades</small>';
+      $("pys-out-conc").innerHTML = (Math.round(concMcgMl)) + ' <small>mcg/mL</small>';
+      $("pys-out-vol").innerHTML = (Math.round(volMl*1000)/1000) + ' <small>mL</small>';
+      $("pys-out-dosis").innerHTML = dosisPorVial + ' <small>aplicaciones</small>';
+
+      dibujarJeringa(unidades, capacidad);
+
+      if(unidades > capacidad){
+        warn.textContent = "⚠️ La dosis (" + (Math.round(unidades*10)/10) + " U) excede la capacidad de la jeringa seleccionada (" + capacidad + " U). Usa una jeringa más grande o más agua bacteriostática.";
+        warn.className = "pys-warn show";
+      } else if(volMl < 0.05){
+        warn.textContent = "ℹ️ El volumen a inyectar es muy pequeño (" + (Math.round(volMl*1000)/1000) + " mL). Considera usar menos agua para una medición más precisa.";
+        warn.className = "pys-warn show";
+      }
+    }
+
+    // Aplicar preset
+    sel.addEventListener("change", function(){
+      if(sel.value===""){ return; }
+      var p = PRESETS[parseInt(sel.value,10)];
+      $("pys-mg").value = p.mg;
+      $("pys-dosis").value = p.dosis;
+      $("pys-dosis-unidad").value = p.u;
+      calcular();
+    });
+
+    // Recalcular en cualquier cambio
+    ["pys-mg","pys-agua","pys-dosis","pys-dosis-unidad","pys-jeringa"].forEach(function(id){
+      $(id).addEventListener("input", calcular);
+      $(id).addEventListener("change", calcular);
+    });
+
+    calcular();
+  })();
+  </script>
+</div>
