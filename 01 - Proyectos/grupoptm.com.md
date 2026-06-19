@@ -88,3 +88,9 @@ Fix bug avatar en PTM Custom v2.4: esc_js() cambiado a wp_json_encode(). Author 
 
 ## Sesión 2026-06-14
 Eliminados scripts temporales de diagnóstico (ptm-diag.php, ptm-fix2.php, ptm-dump.php) de /public_html/ via hook admin_init temporal en ptm-custom.php. Plugin limpio en v2.4. Firma Raditech se mantiene por decisión del usuario.
+
+
+---
+
+## Sesión 2026-06-19 — Modelo de Monetización
+Definido el modelo para legitimar PTM como portal de telemedicina **fuera de la cadena de venta**: consulta $1,500 ($1,000 médico / $500 comisión fija PTM), pago con retención liberado al completar la consulta, sin reembolso por no-show del paciente, asignación automática de médico, Stripe Connect. PTM no factura al paciente (lo hace el médico). ⚠️ Contradice el modelo viejo de [[PTM Novo]] ($500, producto vía PYS) — reconciliar. Pendiente crítico: dictamen de abogado COFEPRIS (péptidos no registrados). Detalle completo en [[2026-06-19 — grupoptm Modelo Monetización]] y en `ecommerce-agent/MODELO_MONETIZACION_PTM.md` (commit 138b7f9).
