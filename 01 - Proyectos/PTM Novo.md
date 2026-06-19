@@ -10,10 +10,10 @@ ruta: C:\Users\gabom\PTM&PYS\PTM Novo\ptm-novo\
 
 ## Descripción
 
-Plataforma 100% online que conecta pacientes con médicos especializados en péptidos. Opera en mancuerna con [[PYS Ecommerce]] como brazo farmacéutico.
+Plataforma 100% online que conecta pacientes con médicos independientes con cédula profesional (TRH + péptidos). PTM cobra por la **consulta y el uso de la plataforma**; **no vende, surte ni cobra productos** — el paciente surte su receta donde elija. Modelo completo: `ecommerce-agent/MODELO_MONETIZACION_PTM.md`.
 
 ```
-Paciente → Quiz → Pago ($500 MXN) → Video-consulta → Receta → Péptidos a domicilio
+Paciente → Quiz → Pago consulta $1,500 (retenido) → Asignación de médico → Video-consulta → Receta → El paciente surte su receta donde elija (PTM no interviene)
 ```
 
 ## Stack
@@ -24,13 +24,17 @@ Paciente → Quiz → Pago ($500 MXN) → Video-consulta → Receta → Péptido
 | Base de datos | Prisma + PostgreSQL |
 | Deploy | Railway (producción) |
 | Video-consulta | Whereby |
-| Pagos | Mercado Pago webhook |
+| Pagos | **Stripe Connect** — split $1,000 médico / $500 PTM vía `application_fee`. ✅ Configurado · ⏳ pruebas pendientes. *(Mercado Pago webhook previo)* |
 
 ## Modelo de Negocio
+*(actualizado 2026-06-19 — fuera de la cadena de venta. Ver [[2026-06-19 — grupoptm Modelo Monetización]])*
 
-- **Consulta:** $500 MXN flat (inicial y seguimiento)
-- **Split médico:** $400 MXN PTM / $100 MXN médico
-- **Producto:** lo cobra PYS por separado (~$1,500 MXN/mes/paciente)
+- **Consulta:** $1,500 MXN (inicial y seguimiento)
+- **Split:** $1,000 MXN médico / **$500 MXN comisión PTM** — comisión **fija por consulta**, nunca % ni atada al producto recetado.
+- **Producto:** PTM **fuera de la venta**. El paciente surte su receta donde elija; ese dinero **nunca toca a PTM**. (PYS, si participa, es proveedor independiente — ver nota legal abajo.)
+- **Retención:** se cobra $1,500 al agendar; el split se **libera al completarse la consulta** (el dinero cae al médico que atendió, cero clawback).
+- **Facturación:** PTM **no factura al paciente**; el médico factura su acto médico, PTM factura su comisión de $500 al médico.
+- **Política de cancelación:** paciente que cancela/no acude → se cobra, **sin reembolso** (el médico cobra igual); médico no-show → se **reagenda**, pago retenido hasta completar.
 - **Capacidad:** 1 médico = 220 consultas/mes máx
 - **Escala:** contratar nuevo médico cuando el actual supera ~150 pacientes
 
@@ -47,7 +51,8 @@ Paciente → Quiz → Pago ($500 MXN) → Video-consulta → Receta → Péptido
 |--------|--------|
 | Frontend/Backend Next.js | 🟡 En desarrollo |
 | Whereby video-consulta | ✅ Integrado |
-| Mercado Pago webhook | ✅ Productivo |
+| Stripe Connect split ($1,000/$500) | ✅ Configurado · ⏳ pruebas pendientes |
+| Mercado Pago webhook | ✅ Productivo (previo) |
 | Prueba pago real | ⏳ Pendiente |
 | WhatsApp API | ⏳ Pendiente |
 | Portal paciente | 🟡 Parcial |
@@ -57,13 +62,18 @@ Paciente → Quiz → Pago ($500 MXN) → Video-consulta → Receta → Péptido
 ## Estructura Legal
 
 - Plataforma tecnológica (no clínica médica)
-- Médicos son contratistas independientes
+- Médicos son contratistas independientes (con cédula profesional verificable)
+- PTM **fuera de la cadena de venta** de productos (monetiza la consulta, no el producto)
+- ⚠️ **Tensión a resolver con abogado:** si [[PYS Ecommerce]] (parte relacionada del [[Ecosistema PTM-PYS]]) vende el producto, la defensa de "PTM es solo plataforma" se **debilita** por parte relacionada (riesgo de "favorecimiento"). Entra al dictamen COFEPRIS.
+- ⚠️ **Péptidos no registrados:** que un médico los recete no los vuelve legales de surtir. Es el hueco que el modelo de cobro no resuelve solo.
 - Pending: definir SA de CV vs SAPI
 
 ## Relacionados
 
-- [[PYS Ecommerce]] — farmacia complementaria
+- [[PYS Ecommerce]] — proveedor independiente (NO dentro de la cadena de cobro de PTM; ver nota legal arriba)
 - [[Ecosistema PTM-PYS]] — modelo de negocio completo
+- [[grupoptm.com]] — sitio marketing/SEO que dirige a la app
+- [[2026-06-19 — grupoptm Modelo Monetización]] — sesión donde se definió este modelo
 - Bóveda PTM&PYS: `C:\Users\gabom\PTM&PYS\00 - Inicio\PTM Novo & PYS\PTM Novo\`
 
 
@@ -78,3 +88,9 @@ Se definió el plan completo para construir grupoptm.mx (sitio WordPress marketi
 
 ## Nota técnica 2026-06-13 — SEO WordPress
 En Raditech se completó auditoría SEO 100/100. Técnicas reutilizables para grupoptm.com: slug cycling para redirects 301, cookie+nonce para Rank Math REST API, purge LiteSpeed via admin panel. Ver [[2026-06-13 - Raditech SEO Score 100]].
+
+
+---
+
+## Sesión 2026-06-19 — Nuevo modelo de monetización (fuera de cadena de venta)
+Se reescribió el **Modelo de Negocio** y el flujo para legitimar PTM como pura plataforma de telemedicina: consulta **$1,500** ($1,000 médico / $500 comisión fija PTM), pago con **retención** liberado al completar la consulta, **sin reembolso** por no-show del paciente, asignación automática de médico, PTM no factura al paciente. Se eliminó "péptidos a domicilio" (era cadena de venta). Flagueada la **tensión legal con PYS** (parte relacionada que vende producto debilita la defensa de plataforma) y el tema de **péptidos no registrados**. Detalle: [[2026-06-19 — grupoptm Modelo Monetización]] · `ecommerce-agent/MODELO_MONETIZACION_PTM.md` (commit 138b7f9).
