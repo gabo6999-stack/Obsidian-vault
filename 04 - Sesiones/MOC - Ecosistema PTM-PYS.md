@@ -16,6 +16,7 @@ tags: [moc, ptm, pys, separacion]
 - [[2026-06-09 — grupoptm.com]]
 - [[2026-06-19 — grupoptm Modelo Monetización]] — separación + modelo fuera de cadena de venta
 - [[2026-06-19 — NEXUS Centro de Comando y Fix Agente Blogs PYS]] — app NEXUS + integraciones + fix del Agente de Blogs en PYS (WP auth + imagen)
+- [[2026-06-19 — grupoptm 4 Verticales y Fix Clicks Fantasma Móvil]] — ampliación a 4 verticales (home + hubs + landings + menú + SEO) + fix de clicks fantasma móvil (menú oculto de Astra + purga de caché que no se ejecutaba)
 
 > ⚠️ Las sesiones de junio describen el modelo **integrado anterior (deprecado)**. Se conservan como registro histórico; el modelo vigente es el de la sesión 2026-06-19.
 
