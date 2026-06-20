@@ -4,25 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f6ff9975c5d72c7b",
+        "id": "42f0c1b3de3ea2e7",
         "type": "tabs",
         "children": [
           {
-            "id": "4062f1b461e30063",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Home.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Home"
-            }
-          },
-          {
-            "id": "287d28f75d59da00",
+            "id": "389f56a545eb12d8",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -31,8 +17,7 @@
               "title": "Vista gráfica"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -111,7 +96,7 @@
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": false
+                "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
               "title": "Enlaces entrantes"
@@ -123,12 +108,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Home.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Enlaces salientes de Home"
+              "title": "Enlaces salientes"
             }
           },
           {
@@ -193,44 +177,44 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "287d28f75d59da00",
+  "active": "389f56a545eb12d8",
   "lastOpenFiles": [
-    "04 - Sesiones/MOC - Ecosistema PTM-PYS.md.tmp.14896.3cea0734c623",
-    "04 - Sesiones/2026-06-19 — grupoptm 4 Verticales y Fix Clicks Fantasma Móvil.md",
-    "04 - Sesiones/2026-06-19 — grupoptm 4 Verticales y Fix Clicks Fantasma Móvil.md.tmp.14896.6c47c38dda13",
-    "04 - Sesiones/MOC - Ecosistema PTM-PYS.md.tmp.14524.46b92a193ff0",
-    "04 - Sesiones/2026-06-19 — NEXUS Centro de Comando y Fix Agente Blogs PYS.md",
-    "04 - Sesiones/2026-06-19 — NEXUS Centro de Comando y Fix Agente Blogs PYS.md.tmp.14524.43a9575e9650",
-    "01 - Proyectos/PTM Novo.md.tmp.3360.78e827488eb0",
-    "01 - Proyectos/PTM Novo.md.tmp.3360.f2a6eb0769c2",
-    "04 - Sesiones/2026-06-19 — PTM Novo Stripe, Rubros, KYC y R2.md",
-    "04 - Sesiones/2026-06-19 — PTM Novo Stripe, Rubros, KYC y R2.md.tmp.3360.6bc6e6e90050",
-    "01 - Proyectos/PTM Novo.md.tmp.2244.9e68ebd4bfb6",
-    "01 - Proyectos/Ecommerce Agent.md.tmp.2244.b13cab1bc507",
-    "01 - Proyectos/grupoptm.com.md.tmp.2244.ef16446daee1",
-    "01 - Proyectos/grupoptm.com.md.tmp.2244.76c9f0be488f",
-    "04 - Sesiones/2026-06-19 — PYS Calculadora de Dosis.md",
-    "04 - Sesiones/2026-06-19 — grupoptm Modelo Monetización.md",
-    "conflict-files-obsidian-git.md",
+    "01 - Proyectos/grupoptm.com.md.tmp.23416.1b7dd69eded3",
     "Home.md",
     "Sin título.canvas",
+    "2026-06-08 — grupoptm.com Activacion.md",
+    "04 - Sesiones/2026-06-19 — grupoptm Modelo Monetización.md",
+    "04 - Sesiones/2026-06-19 — grupoptm 4 Verticales y Fix Clicks Fantasma Móvil.md",
+    "04 - Sesiones/2026-06-19 — PYS Calculadora de Dosis.md",
+    "04 - Sesiones/2026-06-19 — PTM Novo Stripe, Rubros, KYC y R2.md",
+    "04 - Sesiones/2026-06-19 — NEXUS Centro de Comando y Fix Agente Blogs PYS.md",
+    "04 - Sesiones/2026-06-09 Raditech SEO Migration.md",
+    "04 - Sesiones/2026-06-14 — Raditech.md",
+    "04 - Sesiones/2026-06-13 - Obsidian MOCs.md.tmp.5828.9fc4c8e9faef",
+    "04 - Sesiones/2026-06-09 - Raditech GSC.md.tmp.5828.fedfb26190e9",
+    "04 - Sesiones/2026-06-13 - Raditech SEO Score 100.md.tmp.5828.de689101a23a",
+    "04 - Sesiones/2026-06-13 - Raditech SEO Redirects.md.tmp.5828.da0e7d1b63f2",
+    "04 - Sesiones/2026-06-08 — Agente SEO PTM Cross-linking.md.tmp.5828.18a75d321ca9",
+    "Home.md.tmp.5828.9aaae3391c6c",
+    "MOC SEO.md.tmp.5828.811f01dbb1cb",
+    "2026-06-08.md",
+    "04 - Sesiones/2026-06-13 Fix avatar author box grupoptm.md",
+    "04 - Sesiones/MOC - SEO.md",
     "MOC SEO.md",
     "2026-06-14.md",
-    "2026-06-13.md",
-    "2026-06-08 — grupoptm.com Activacion.md",
-    "04 - Sesiones/MOC - Raditech.md",
-    "04 - Sesiones/MOC - Ecosistema PTM-PYS.md",
-    "04 - Sesiones/2026-06-14 — Raditech.md",
+    "04 - Sesiones/2026-06-14 — MOC SEO.md",
     "04 - Sesiones/2026-06-13 SEO grupoptm Raditech.md",
-    "04 - Sesiones/2026-06-13 Fix avatar author box grupoptm.md",
-    "04 - Sesiones/2026-06-13 - Raditech SEO Score 100.md",
-    "04 - Sesiones/2026-06-13 - Raditech SEO Redirects.md",
     "04 - Sesiones/2026-06-13 - Obsidian MOCs.md",
-    "04 - Sesiones/2026-06-10 — Raditech Landing Tomografia Cardiaca.md",
-    "04 - Sesiones/2026-06-09 - Raditech GSC.md",
-    "01 - Proyectos/Raditech.md",
-    "04 - Sesiones/2026-06-09 Raditech SEO Migration.md",
+    "2026-06-09.md",
+    "04 - Sesiones/2026-06-08 — Obsidian Vault Setup.md",
+    "2026-06-13.md",
+    "2026-06-10.md",
     "PAGINA RECLUTAMIENTO DE MEDICOS.md",
-    "2026-06-09.md"
+    "04 - Sesiones/MOC - Ecosistema PTM-PYS.md",
+    "04 - Sesiones/MOC - Raditech 1.md",
+    "02 - Contexto/Ecosistema PTM-PYS.md",
+    "04 - Sesiones/2026-06-09 — Raditech Agentes y Blog Setup.md.tmp.30748.9389be6cf25d",
+    "style_block.txt",
+    "page42887.json"
   ]
 }
