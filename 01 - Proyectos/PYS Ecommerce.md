@@ -47,3 +47,5 @@ Tienda WooCommerce con enfoque SEO que vende péptidos y suplementos. Es el braz
 
 ## Nota técnica 2026-06-13 — Redirects 301 y SEO WP
 En Raditech se perfeccionó técnica para redirects 301 en WordPress via slug cycling REST API (Rank Math auto-genera la entrada). También: cookie+nonce > JWT para Rank Math REST, purge LiteSpeed via nonce admin panel. Estas técnicas aplican igual en peptidosysuplementos.mx. Ver [[2026-06-13 - Raditech SEO Score 100]].
+## Nota 2026-06-19 — Calculadora de Dosis de Péptidos
+Se publicó la **Calculadora de Dosis de Péptidos** (`/calculadora-de-dosis-de-peptidos/`, post 2040) — widget HTML autocontenido en Elementor que replica la UX de particlepeptides.com en español (jeringas/viales SVG, toggle mcg/mg, regla con marcador). Botón "Calculadora" añadido al menú del header (template Elementor **#1099**, widget HTML `c442c6a` — el header NO usa menú de WP). Ver [[2026-06-19 — PYS Calculadora de Dosis]].
