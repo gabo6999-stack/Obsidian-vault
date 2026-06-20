@@ -1,57 +1,47 @@
 ---
-tags: [contexto, ecosistema, negocio, ptm-novo, pys]
+tags: [contexto, negocio, ptm-novo, pys, legal, separacion]
 ---
 
-# Ecosistema PTM Novo ↔ PYS
+# PTM Novo y PYS — Empresas Independientes
 
-> El ecosistema donde ambas empresas son de Antonio Gavito Hernández y trabajan en mancuerna.
+> **Actualizado 2026-06-19.** PTM Novo y PYS **ya NO operan como ecosistema hermano**. Son **empresas independientes**. Esta nota documenta su separación y reemplaza el modelo integrado anterior.
 
-## Flujo Principal
+## Posicionamiento actual (independiente)
+
+- **PTM Novo:** plataforma tecnológica de telemedicina. Cobra por la **consulta** y el uso de la plataforma. **NO vende, surte ni cobra productos.**
+- **PYS:** farmacia online de péptidos y suplementos. **Proveedor independiente**, uno más del mercado. NO es "brazo farmacéutico" de PTM.
+- **Sin integración preferente:** PTM no dirige pacientes a PYS. El paciente surte su receta donde elija. Cero flujo de dinero de producto entre PTM y PYS.
 
 ```
-Paciente
-  → Quiz de evaluación (PTM Novo)
-  → Pago $500 MXN consulta (Mercado Pago)
-  → Video-consulta con médico (Whereby)
-  → Receta de péptidos
-  → Compra en peptidosysuplementos.mx (~$1,500 MXN/mes)
+PTM Novo:  Paciente → consulta $1,500 (retenido) → médico → receta → [el paciente surte donde elija]
+PYS:       Tienda online independiente. Vende a quien le compre, sin relación de cobro con PTM.
 ```
 
-## División de Ingresos
+## ⚠️ Para que la independencia sea REAL (no solo documental)
 
-| Actor | Ingreso por consulta |
-|-------|---------------------|
-| PTM Novo (retiene) | $400 MXN |
-| Médico (contratista) | $100 MXN |
-| PYS (producto) | ~$1,500 MXN/mes/paciente (separado) |
+Reescribir las notas **no** vuelve independientes a las empresas. La separación debe existir en los hechos:
 
-## Posicionamiento
+| Frente | Qué se requiere | Estado |
+|--------|-----------------|--------|
+| **Propiedad / control** | Dueños o control separados (sin parte relacionada) | ⏳ Validar con abogado |
+| **Dinero** | Cero flujo de producto PTM↔PYS; arm's length | ⏳ |
+| **Operación** | Sin cross-linking ni embudo PTM→PYS / PYS→PTM | ⏳ Quitar cross-links del agente (ver abajo) |
+| **Contratos** | Si hay cualquier trato, que sea de mercado y documentado | ⏳ |
 
-- **PTM Novo:** plataforma tecnológica de telemedicina (no clínica)
-- **PYS:** farmacia online de péptidos y suplementos
-- Médicos son contratistas independientes
+> **El agujero más serio:** si ambas son del mismo dueño, siguen siendo **partes relacionadas** ante la ley aunque las notas digan "independientes" → debilita la defensa de "PTM es solo plataforma" (riesgo de *favorecimiento*). Esto **entra al dictamen del abogado regulatorio (COFEPRIS)**. Ver [[2026-06-19 — grupoptm Modelo Monetización]].
 
-## Diferenciadores vs Competencia MX
+## Cross-linking operativo a eliminar
 
-1. Médicos especializados en péptidos (no generales)
-2. Farmacia propia integrada
-3. Seguimiento real (no solo venta)
-4. Precios transparentes en MXN
-5. WhatsApp-first
-6. Solo 2 programas claros
+La separación documental no basta mientras los sitios/agentes se embudan entre sí. Pendiente desmontar:
+- CTAs bidireccionales PYS ↔ PTM en el agente [[Ecommerce Agent]] (system prompt).
+- Links grupoptm.com → PYS ("productos con receta") y PYS → grupoptm.com ("consulta médica"). Ver [[grupoptm.com]].
 
-## Escalabilidad
+## Modelo anterior (DEPRECADO — solo referencia histórica)
 
-- 1 médico atiende máx 220 consultas/mes
-- Contratar nuevo médico cuando supera ~150 pacientes (80% ocupación)
-- Proyección: crecimiento por número de médicos contratados
+> ❌ Ya no vigente. Se documentó como ecosistema integrado del mismo dueño donde el paciente pagaba $500 de consulta en PTM y compraba ~$1,500/mes de producto en PYS. Ese modelo es justo la **cadena de venta** que se está eliminando.
 
-## Proyectos Relacionados
+## Proyectos relacionados
 
-- [[PTM Novo]] — plataforma telemedicina
-- [[PYS Ecommerce]] — farmacia online
-- [[Agente de Blogs]] — SEO para PYS
-- [[Chatbot PYS]] — atención a clientes PYS
-- [[Ecommerce Agent]] — operaciones PYS
-- [[Social Video Agent]] — marketing PYS
-- [[WhatsApp Bot Tanus]] — comunicación personal/PYS
+- [[PTM Novo]] — plataforma telemedicina (independiente)
+- [[PYS Ecommerce]] — farmacia online (independiente)
+- [[grupoptm.com]] — sitio marketing de PTM

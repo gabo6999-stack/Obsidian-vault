@@ -6,8 +6,9 @@ ruta: Remoto (grupoptm.com / Hostinger)
 
 # grupoptm.com — Sitio Marketing PTM Novo
 
-> Sitio WordPress de marketing y SEO para el ecosistema PTM Novo.
+> Sitio WordPress de marketing y SEO de **PTM Novo** (telemedicina).
 > URL: grupoptm.com
+> Nota 2026-06-19: PTM y [[PYS Ecommerce]] son **empresas independientes** — sin cross-linking ni embudo entre ambas. Ver [[Ecosistema PTM-PYS]].
 
 ## Rol en el ecosistema
 
@@ -47,13 +48,17 @@ Cada landing termina con CTA → [[PTM Novo]] en Railway.
 - [ ] Verificar con get_ptm_pages() desde el agente SEO
 - [ ] Diseñar cada landing en Elementor
 - [ ] Optimizar SEO de las 5 landings via agente
-- [ ] Activar cross-links PTM ↔ PYS
+- [x] ~~Activar cross-links PTM ↔ PYS~~ ❌ CANCELADO 2026-06-19 — PTM y PYS son independientes; NO debe haber cross-linking entre ambas (ver nota de separación)
 
-## Cross-linking PTM ↔ PYS
+## Cross-linking PTM ↔ PYS — ❌ DEPRECADO (2026-06-19)
 
-- grupoptm.com → PYS: en landings de péptidos, link a productos con receta
-- PYS → grupoptm.com: en landings de productos, link a consulta médica PTM Novo
-- Manejable via [[Agente SEO GSC]] (ya tiene herramientas para ambos sitios)
+> PTM y PYS son **empresas independientes**. El cross-linking que embudaba paciente PTM → producto PYS (y viceversa) **se elimina** — es justo la cadena de venta que rompe la defensa de "PTM es solo plataforma".
+>
+> **Pendiente operativo:** quitar las reglas de CTA bidireccional PYS ↔ PTM del system prompt del agente [[Ecommerce Agent]] y los links cruzados en las landings.
+
+Modelo anterior (ya no aplicar):
+- ~~grupoptm.com → PYS: link a productos con receta~~
+- ~~PYS → grupoptm.com: link a consulta médica PTM Novo~~
 
 ## Estado (2026-06-08)
 

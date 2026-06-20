@@ -1,11 +1,10 @@
 ---
-tags: [moc, ptm, pys, ecosistema]
+tags: [moc, ptm, pys, separacion]
 ---
 
-# Ecosistema PTM-PYS — Historial de sesiones
+# PTM Novo y PYS — Historial de sesiones
 
-PTM Novo (telemedicina peptidos) y PYS (peptidosysuplementos.mx) son el mismo ecosistema.
-Paciente paga consulta en PTM → compra suplementos en PYS.
+> **Actualizado 2026-06-19.** PTM Novo (telemedicina) y PYS (peptidosysuplementos.mx) **ya NO son el mismo ecosistema**. Son **empresas independientes** — ver [[Ecosistema PTM-PYS]] (nota de separación). PTM cobra la consulta; el paciente surte su receta donde elija, sin embudo a PYS.
 
 ## Sesiones
 - [[2026-06-08 — Agente Blogs PTM]]
@@ -15,9 +14,12 @@ Paciente paga consulta en PTM → compra suplementos en PYS.
 - [[2026-06-08 — Plan Maestro PTM]]
 - [[2026-06-08 — PTM-NOVO y grupoptm Actualizaciones]]
 - [[2026-06-09 — grupoptm.com]]
+- [[2026-06-19 — grupoptm Modelo Monetización]] — separación + modelo fuera de cadena de venta
+
+> ⚠️ Las sesiones de junio describen el modelo **integrado anterior (deprecado)**. Se conservan como registro histórico; el modelo vigente es el de la sesión 2026-06-19.
 
 ## Proyectos
 [[PTM Novo]] | [[PYS Ecommerce]] | [[Ecosistema PTM-PYS]] | [[grupoptm.com]]
 
 ## Separado de
-[[MOC - Raditech]] — cliente externo, no parte del ecosistema
+[[MOC - Raditech]] — cliente externo

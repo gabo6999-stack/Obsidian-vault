@@ -35,7 +35,7 @@ El modelo viejo registrado en [[PTM Novo]] **contradice** lo definido hoy:
 | Consulta | $500 | **$1,500** |
 | Split | $400 PTM / $100 médico | **$1,000 médico / $500 PTM** |
 | Producto | lo cobra [[PYS Ecommerce]] (~$1,500/mes) = **cadena de venta** | PTM **fuera** de la venta; paciente surte donde quiera |
-- **Tensión legal a resolver:** si PYS (entidad hermana del [[Ecosistema PTM-PYS]]) es quien vende el producto, la defensa de "PTM es solo plataforma" se **debilita** (riesgo de "favorecimiento" por parte relacionada). Esto debe entrar al dictamen del abogado.
+- **Resuelto (decisión del usuario):** PTM y PYS se declaran **empresas independientes** — ya no ecosistema hermano. Notas del vault actualizadas (ver [[Ecosistema PTM-PYS]]). **Pero la independencia debe ser real:** propiedad/control separados, cero flujo de dinero de producto, y quitar el cross-linking operativo PTM↔PYS. Si persiste propiedad común, siguen siendo parte relacionada → lo valida el abogado.
 
 ## Próximos pasos
 - [ ] **Paso 0 — Brief para abogado regulatorio sanitario (COFEPRIS):** validar el modelo y resolver el tema de **péptidos no registrados** (que un médico los recete no los vuelve legales de surtir). Crear `BRIEF_ABOGADO_PTM.md`.

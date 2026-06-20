@@ -52,14 +52,17 @@ PTM_WP_USER=<pendiente>
 PTM_WP_PASSWORD=<pendiente>
 ```
 
-## Cross-linking PTM (Opción C) — mergeado 2026-06-08
+## Cross-linking PTM (Opción C) — ⚠️ A REVERTIR (2026-06-19)
 
-El agente ahora tiene acceso bidireccional a **grupoptm.com** (WordPress):
+> PTM Novo y [[PYS Ecommerce]] son **empresas independientes**. El **CTA bidireccional PYS ↔ PTM** debe **quitarse** del system prompt — embudar paciente PTM → producto PYS es la cadena de venta que rompe la defensa de "PTM es solo plataforma". Ver [[Ecosistema PTM-PYS]].
+>
+> **Pendiente operativo:** remover del system prompt las reglas de CTA cruzado PYS↔PTM. (El acceso técnico CRUD a grupoptm.com puede quedarse para gestionar el sitio de PTM; lo que se elimina es el **embudo cruzado** hacia PYS.)
+
+Estado mergeado 2026-06-08 (a revertir en la parte de CTA):
 - 8 funciones CRUD para posts y pages de PTM
 - 8 herramientas Claude registradas
-- System prompt actualizado con reglas de CTA bidireccional PYS ↔ PTM
+- ~~System prompt con reglas de CTA bidireccional PYS ↔ PTM~~ ← eliminar
 - `PTM_URL` default: `https://grupoptm.com` (no necesita var Railway)
-- **Pendiente:** agregar `PTM_WP_USER` y `PTM_WP_PASSWORD` en Railway una vez que WP esté configurado
 
 ### Setup WP grupoptm.com pendiente
 - [ ] Plugin JWT Authentication for WP-API + editar wp-config.php

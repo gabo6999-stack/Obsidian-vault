@@ -11,7 +11,7 @@ ruta: Remoto (peptidosysuplementos.mx)
 
 ## Descripción
 
-Tienda WooCommerce con enfoque SEO que vende péptidos y suplementos. Es el brazo farmacéutico de [[PTM Novo]] — los pacientes de PTM Novo compran aquí sus péptidos.
+Tienda WooCommerce con enfoque SEO que vende péptidos y suplementos. **Empresa independiente** (actualizado 2026-06-19): ya NO es "brazo farmacéutico" de [[PTM Novo]] ni parte de su cadena de venta. PYS vende a quien le compre, sin relación de cobro con PTM. Ver [[Ecosistema PTM-PYS]] (nota de separación).
 
 ## Stack
 

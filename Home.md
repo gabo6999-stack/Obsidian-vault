@@ -25,9 +25,9 @@ tags: [dashboard, cerebro, inicio]
 
 ---
 
-## Ecosistema Central
+## Empresas independientes
 
-[[Ecosistema PTM-PYS]] — PTM Novo (telemedicina) → receta → PYS (farmacia)
+[[Ecosistema PTM-PYS]] — **PTM Novo y PYS son independientes** (ya no ecosistema hermano). PTM = telemedicina (cobra consulta, fuera de la venta); PYS = farmacia independiente. El paciente surte su receta donde elija.
 
 ---
 
@@ -52,7 +52,7 @@ obsidian tags vault=Obsidian
 
 - [[Obsidian CLI — Referencia]] — comandos disponibles
 - [[Stack Compartido]] — tecnologías y patrones comunes
-- [[Ecosistema PTM-PYS]] — modelo de negocio
+- [[Ecosistema PTM-PYS]] — separación PTM / PYS (empresas independientes)
 
 
 

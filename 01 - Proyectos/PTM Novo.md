@@ -64,15 +64,16 @@ Paciente → Quiz → Pago consulta $1,500 (retenido) → Asignación de médico
 - Plataforma tecnológica (no clínica médica)
 - Médicos son contratistas independientes (con cédula profesional verificable)
 - PTM **fuera de la cadena de venta** de productos (monetiza la consulta, no el producto)
-- ⚠️ **Tensión a resolver con abogado:** si [[PYS Ecommerce]] (parte relacionada del [[Ecosistema PTM-PYS]]) vende el producto, la defensa de "PTM es solo plataforma" se **debilita** por parte relacionada (riesgo de "favorecimiento"). Entra al dictamen COFEPRIS.
+- **Separación de [[PYS Ecommerce]] (decidida 2026-06-19):** PTM y PYS son **empresas independientes**; PYS NO es parte de la cadena de cobro de PTM. Ver [[Ecosistema PTM-PYS]].
+- ⚠️ **Pendiente para que la separación sea real (no solo documental):** propiedad/control separados, cero flujo de dinero de producto, y eliminar el cross-linking operativo. Si persiste propiedad común, siguen siendo **parte relacionada** → lo valida el abogado (dictamen COFEPRIS).
 - ⚠️ **Péptidos no registrados:** que un médico los recete no los vuelve legales de surtir. Es el hueco que el modelo de cobro no resuelve solo.
 - Pending: definir SA de CV vs SAPI
 
 ## Relacionados
 
-- [[PYS Ecommerce]] — proveedor independiente (NO dentro de la cadena de cobro de PTM; ver nota legal arriba)
-- [[Ecosistema PTM-PYS]] — modelo de negocio completo
-- [[grupoptm.com]] — sitio marketing/SEO que dirige a la app
+- [[PYS Ecommerce]] — **empresa independiente** (NO en la cadena de cobro de PTM)
+- [[Ecosistema PTM-PYS]] — nota de **separación** PTM / PYS
+- [[grupoptm.com]] — sitio marketing/SEO de PTM
 - [[2026-06-19 — grupoptm Modelo Monetización]] — sesión donde se definió este modelo
 - Bóveda PTM&PYS: `C:\Users\gabom\PTM&PYS\00 - Inicio\PTM Novo & PYS\PTM Novo\`
 
