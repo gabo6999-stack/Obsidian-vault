@@ -51,13 +51,18 @@ Paciente → Quiz → Pago consulta $1,500 (retenido) → Asignación de médico
 |--------|--------|
 | Frontend/Backend Next.js | 🟡 En desarrollo |
 | Whereby video-consulta | ✅ Integrado |
-| Stripe Connect split ($1,000/$500) | ✅ Configurado · ⏳ pruebas pendientes |
-| Mercado Pago webhook | ✅ Productivo (previo) |
-| Prueba pago real | ⏳ Pendiente |
+| Stripe Connect split ($1,000/$500) | ✅ Configurado y **probado E2E** (test) |
+| Prueba pago real (checkout→webhook→Payment HELD) | ✅ Verificada (test) |
+| Onboarding Connect del médico | ✅ Verificado (médico Activo) |
+| Rubros de terapia (4) + editor de médicos | ✅ |
+| Credencialización / KYC médico (documentos + verificación) | ✅ |
+| Almacenamiento documentos (Cloudflare R2 privado) | ✅ Conectado y probado |
+| Mercado Pago | ❌ Eliminado (migrado a Stripe) |
 | WhatsApp API | ⏳ Pendiente |
 | Portal paciente | 🟡 Parcial |
-| Portal médico | 🟡 Parcial |
-| Panel admin (Antonio) | ⏳ Pendiente |
+| Portal médico | 🟡 Parcial (+ Mi perfil: rubros + documentos) |
+| Panel admin (Antonio) | 🟡 Parcial (médicos, ingresos, credencialización) |
+| Llaves Stripe LIVE | ⏳ Solo con dictamen legal COFEPRIS |
 
 ## Estructura Legal
 
@@ -95,3 +100,13 @@ En Raditech se completó auditoría SEO 100/100. Técnicas reutilizables para gr
 
 ## Sesión 2026-06-19 — Nuevo modelo de monetización (fuera de cadena de venta)
 Se reescribió el **Modelo de Negocio** y el flujo para legitimar PTM como pura plataforma de telemedicina: consulta **$1,500** ($1,000 médico / $500 comisión fija PTM), pago con **retención** liberado al completar la consulta, **sin reembolso** por no-show del paciente, asignación automática de médico, PTM no factura al paciente. Se eliminó "péptidos a domicilio" (era cadena de venta). Flagueada la **tensión legal con PYS** (parte relacionada que vende producto debilita la defensa de plataforma) y el tema de **péptidos no registrados**. Detalle: [[2026-06-19 — grupoptm Modelo Monetización]] · `ecommerce-agent/MODELO_MONETIZACION_PTM.md` (commit 138b7f9).
+
+
+---
+
+## Sesión 2026-06-19 — Stripe, Rubros, KYC y Almacenamiento R2
+Se implementó y verificó (modo test) gran parte de la plataforma: **Stripe Connect** de punta a punta (checkout $1,500 → webhook 200 → `Payment` HELD; onboarding del médico → Activo), migrando fuera de Mercado Pago; corrección del split a **$500/$1,000** en 3 pantallas; **4 rubros de terapia** del médico (`TherapyArea`) con **editor de médicos** y **auto-edición con aprobación** del admin; **credencialización (KYC médico)** con subida de documentos (ID, título general, especialidad, diplomados) y revisión del admin; y **almacenamiento de documentos en Cloudflare R2** (bucket privado + URLs firmadas), probado E2E. Detalle: [[2026-06-19 — PTM Novo Stripe, Rubros, KYC y R2]].
+
+**Pendientes:** gatear asignación a médicos verificados + rubro aprobado · linkear rubros con el quiz · ciclo consulta→completar→transfer $1,000 · pasar a Stripe LIVE solo con dictamen legal COFEPRIS.
+
+> Nota: los **2 programas** de la tabla de arriba quedaron desactualizados — el modelo ahora maneja **4 rubros** (Pérdida de peso, Péptidos & Longevidad, Salud para Hombres/TRH, Salud para Mujeres) en el enum `TherapyArea`. La ruta de la bóveda y el stack de "2 programas" son históricos.
