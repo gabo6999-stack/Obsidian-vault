@@ -1,4 +1,5 @@
 ---
+aliases: [grupoptm, GrupoPTM, grupoptm.com marketing]
 tags: [proyecto, ptm-novo, wordpress, seo, marketing]
 estado: Operando (4 verticales activas)
 ruta: Remoto (grupoptm.com / Hostinger)

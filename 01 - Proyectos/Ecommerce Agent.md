@@ -1,4 +1,5 @@
 ---
+aliases: [Agente Ecommerce, WooCommerce Agent]
 tags: [proyecto, pys, agente, ecommerce, woocommerce, railway]
 estado: Activo
 ruta: C:\Users\gabom\ecommerce-agent\

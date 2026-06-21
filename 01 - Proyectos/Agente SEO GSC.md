@@ -1,4 +1,5 @@
 ---
+aliases: [GSC, Google Search Console, Agente SEO]
 tags: [proyecto, pys, agente, seo, google-search-console]
 estado: Configurado
 ruta: C:\Users\gabom\ecommerce-agent\

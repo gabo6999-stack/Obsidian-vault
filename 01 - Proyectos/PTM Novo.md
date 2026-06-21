@@ -1,4 +1,5 @@
 ---
+aliases: [PTM, PTM Novo telemedicina, ptm-novo]
 tags: [proyecto, ptm-novo, telemedicina, nextjs]
 estado: En desarrollo
 ruta: C:\Users\gabom\PTM&PYS\PTM Novo\ptm-novo\

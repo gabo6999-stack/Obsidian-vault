@@ -1,0 +1,10 @@
+filters:
+  and:
+    - file.inFolder("01 - Proyectos")
+views:
+  - type: table
+    name: Proyectos
+    order:
+      - file.name
+      - estado
+      - tags

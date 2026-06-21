@@ -1,4 +1,5 @@
 ---
+aliases: [raditech.mx, RadiTech]
 tags: [proyecto, raditech, seo, wordpress]
 estado: Activo
 sitio: https://raditech.mx

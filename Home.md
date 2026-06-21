@@ -10,6 +10,12 @@ tags: [dashboard, cerebro, inicio]
 
 ## Proyectos Activos
 
+> Vista dinámica — se genera sola desde el `estado:` de cada nota de proyecto (no hay que mantenerla a mano):
+
+![[Proyectos.base]]
+
+### Tabla estática (respaldo — bórrala cuando confirmes que la vista Bases de arriba carga)
+
 | Proyecto                        | Estado              | Stack                    | Ruta                                        |
 | ------------------------------- | ------------------- | ------------------------ | ------------------------------------------- |
 | [[PTM Novo]]                    | 🟡 En desarrollo    | Next.js, Prisma, Railway | `C:\Users\gabom\PTM&PYS\PTM Novo\ptm-novo\` |

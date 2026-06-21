@@ -6,6 +6,8 @@ tags: [referencia, cli, obsidian, herramientas]
 
 > CLI instalado como parte de Obsidian desktop. Vault de este cerebro: `obsidian`
 
+> ⚠️ **Requiere Obsidian abierto.** El CLI habla con la app de escritorio; si Obsidian está cerrado, los comandos fallan y `/gs` no puede escribir en el vault. Los agentes headless (Railway) **no** tienen este CLI — para ellos el contexto vive en `CLAUDE.md` (commiteado al repo) y en la memoria del proyecto.
+
 ## Instalación
 
 1. Abrir Obsidian → Settings → General → habilitar "Command line interface"

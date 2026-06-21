@@ -1,4 +1,5 @@
 ---
+aliases: [PYS, Péptidos y Suplementos MX, peptidosysuplementos.mx]
 tags: [proyecto, pys, wordpress, woocommerce, seo]
 estado: Operando
 ruta: Remoto (peptidosysuplementos.mx)
