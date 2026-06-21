@@ -2,6 +2,8 @@
 
 ## Estado al cerrar sesión
 
+cambios hechos en [[Raditech]]
+
 ### ✅ Completado hoy
 
 #### Migración de páginas (8/8 publicadas)
