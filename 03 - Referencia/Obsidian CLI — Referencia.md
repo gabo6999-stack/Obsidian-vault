@@ -76,11 +76,16 @@ Los vaults disponibles se listan con: `obsidian vaults`
 
 ```
 obsidian/
-├── Home.md                    ← dashboard principal
-├── 01 - Proyectos/            ← una nota por proyecto
+├── Home.md                            ← dashboard principal
+├── MOC SEO.md                         ← MOC transversal de SEO
+├── PAGINA RECLUTAMIENTO DE MEDICOS.md
+├── 01 - Proyectos/                    ← una nota por proyecto
 │   ├── PTM Novo.md
+│   ├── grupoptm.com.md
 │   ├── PYS Ecommerce.md
+│   ├── Raditech.md
 │   ├── Agente de Blogs.md
+│   ├── Agente SEO GSC.md
 │   ├── Chatbot PYS.md
 │   ├── Ecommerce Agent.md
 │   ├── Social Video Agent.md
@@ -91,6 +96,11 @@ obsidian/
 ├── 02 - Contexto/
 │   ├── Ecosistema PTM-PYS.md
 │   └── Stack Compartido.md
-└── 03 - Referencia/
-    └── Obsidian CLI — Referencia.md (este archivo)
+├── 03 - Referencia/
+│   └── Obsidian CLI — Referencia.md (este archivo)
+├── 04 - Sesiones/                     ← bitácoras por fecha + MOCs de proyecto
+│   ├── 2026-MM-DD — <tema>.md
+│   ├── MOC - Raditech.md
+│   └── MOC - Ecosistema PTM-PYS.md
+└── Diario/                            ← daily notes (YYYY-MM-DD)
 ```
