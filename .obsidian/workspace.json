@@ -11,13 +11,14 @@
             "id": "b7de58367a3eaaaa",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "Sin título 1.base",
-                "viewName": "Tabla"
+                "file": "01 - Proyectos/AutoDiag Pro.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-table",
-              "title": "Sin título 1"
+              "icon": "lucide-file",
+              "title": "AutoDiag Pro"
             }
           }
         ]
@@ -52,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#autodiag",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,8 +74,7 @@
               "title": "Marcadores"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -197,8 +197,8 @@
   },
   "active": "b7de58367a3eaaaa",
   "lastOpenFiles": [
-    "Sin título.base",
     "Sin título 1.base",
+    "Sin título.base",
     "Diario/2026-06-20.md",
     "Home.md",
     "Home.md.tmp.18204.04216e0df1ce",
