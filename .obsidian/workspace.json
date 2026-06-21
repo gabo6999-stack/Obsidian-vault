@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "42f0c1b3de3ea2e7",
+        "id": "0dd8a08bcd555dbe",
         "type": "tabs",
         "children": [
           {
-            "id": "389f56a545eb12d8",
+            "id": "b7de58367a3eaaaa",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -179,12 +179,13 @@
   },
   "active": "2e68fccaa554ba3c",
   "lastOpenFiles": [
+    "Home.md",
+    "PAGINA RECLUTAMIENTO DE MEDICOS.md",
     "Diario/2026-06-14.md",
     "Diario/2026-06-13.md",
     "Diario/2026-06-08.md",
     "Diario",
     "01 - Proyectos/grupoptm.com.md.tmp.23416.1b7dd69eded3",
-    "Home.md",
     "Sin título.canvas",
     "2026-06-08 — grupoptm.com Activacion.md",
     "04 - Sesiones/2026-06-19 — grupoptm Modelo Monetización.md",
@@ -213,7 +214,6 @@
     "04 - Sesiones/2026-06-08 — Obsidian Vault Setup.md",
     "2026-06-13.md",
     "2026-06-10.md",
-    "PAGINA RECLUTAMIENTO DE MEDICOS.md",
     "04 - Sesiones/MOC - Ecosistema PTM-PYS.md",
     "04 - Sesiones/2026-06-09 — Raditech Agentes y Blog Setup.md.tmp.30748.9389be6cf25d"
   ]

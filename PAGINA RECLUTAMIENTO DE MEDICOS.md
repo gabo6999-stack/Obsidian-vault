@@ -1,1 +1,0 @@
-vamos a montar una pagina exclusivamente de reclutamiento de medicos funcionales , medicina regenerativa para que consulten via ptm y si van a usar peptidos pues nosotros surtimos  y otras cosas como hormonas puedo hacer manuerna con EL QUE ME VENDE LA TESTO , SUPLEMENTOS QUE VAYAN A IHERB
