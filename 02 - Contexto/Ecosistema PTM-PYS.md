@@ -9,7 +9,7 @@ tags: [contexto, negocio, ptm-novo, pys, legal, separacion]
 ## Posicionamiento actual (independiente)
 
 - **PTM Novo:** plataforma tecnológica de telemedicina. Cobra por la **consulta** y el uso de la plataforma. **NO vende, surte ni cobra productos.**
-- **PYS:** farmacia online de péptidos y suplementos. **Proveedor independiente**, uno más del mercado. NO es "brazo farmacéutico" de PTM.
+- **PYS:** tienda en línea de péptidos y suplementos. **Proveedor independiente**, uno más del mercado. NO es el "brazo de venta" de PTM.
 - **Sin integración preferente:** PTM no dirige pacientes a PYS. El paciente surte su receta donde elija. Cero flujo de dinero de producto entre PTM y PYS.
 
 ```
@@ -43,5 +43,5 @@ La separación documental no basta mientras los sitios/agentes se embudan entre 
 ## Proyectos relacionados
 
 - [[PTM Novo]] — plataforma telemedicina (independiente)
-- [[PYS Ecommerce]] — farmacia online (independiente)
+- [[PYS Ecommerce]] — tienda en línea (independiente)
 - [[grupoptm.com]] — sitio marketing de PTM
