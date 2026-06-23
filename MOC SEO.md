@@ -67,6 +67,11 @@ Raditech, PYS y PTM comparten stack SEO similar (WordPress + Rank Math).
 - 🔴 **Theme File Editor de grupoptm NO guarda con `form.submit()`** (WP moderno usa AJAX). Usar `wp.ajax.post('edit-theme-plugin-file', {nonce, file, theme:'astra', newcontent})`. Verificar releyendo el editor fresh (lee disco). Corrige el gotcha viejo del submit.
 - Para schema en `<head>`: grupoptm → plugin **hefo**; raditech → **WPCode**. Ambos sobreviven a updates del tema (mejor que functions.php).
 
+**Raditech — BreadcrumbList 3 niveles**
+- Las 9 landings de producto ya tenían BreadcrumbList de Rank Math (2 niveles, "Home > título con | Raditech", sin migas visibles en Elementor).
+- Solución sin duplicar: **snippet WPCode PHP id 949** con filtro `rank_math/json_ld` que reescribe el itemListElement a 3 niveles `Inicio > Productos > [nombre corto]`. Verificado en las 9 (canónica + cache-bust). Caché LiteSpeed purgada.
+- Técnica reutilizable: **modificar el JSON-LD de Rank Math vía su filtro `rank_math/json_ld`** en vez de crear schema nuevo → evita duplicados y mantiene consistencia.
+
 **Pendiente**
 - 🐛 La página `/contacto/` de **grupoptm.com** muestra datos de **Raditech** (email info@raditech.mx, dirección Venustiano Carranza, texto teleradiología). Corregir con datos reales de PTM.
 - Búsqueda Console del agente SEO ya funciona para PYS/Raditech/PTM.
