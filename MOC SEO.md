@@ -1,6 +1,6 @@
 ---
 tags: [moc, seo]
-actualizado: 2026-06-14
+actualizado: 2026-06-23
 ---
 
 # MOC SEO
@@ -16,10 +16,12 @@ Raditech, PYS y PTM comparten stack SEO similar (WordPress + Rank Math).
 - [[2026-06-10 — Raditech Landing Tomografia Cardiaca]]
 - [[2026-06-13 - Raditech SEO Redirects]] — 8/8 redirects 301 vía slug cycling
 - [[2026-06-13 - Raditech SEO Score 100]]
+- [[2026-06-23 — PYS SKU y Precios, Raditech LCP, Omega-3 Elementor]] — LCP hero 10.5→2.6 s (WebP)
 
 ## Sesiones — PTM / PYS
 - [[2026-06-08 — Agente SEO PTM Cross-linking]]
 - [[2026-06-08 — Agente Blogs PTM]]
+- [[2026-06-23 — PYS SKU y Precios, Raditech LCP, Omega-3 Elementor]] — SKU 16, slugs MOTS-c/Agua, Omega-3 Elementor
 
 ## Sesiones — grupoptm.com
 - [[2026-06-13 SEO grupoptm Raditech]]
@@ -33,6 +35,11 @@ Raditech, PYS y PTM comparten stack SEO similar (WordPress + Rank Math).
 - **Purge LiteSpeed** vía nonce del admin panel
 - **Plugin Editor de WP (CodeMirror):** usar `cmObj.setValue()` (instancia CM), NO `textarea.value`, para que el form envíe el contenido actualizado. La primera edición vía `textarea.value` no funciona: CodeMirror ignora el cambio y el form envía el contenido original.
 - **Hook `admin_init` temporal** en un plugin para operaciones de filesystem cuando WP File Manager da error de permisos: agregar el hook vía Plugin Editor, ejecutar una vez y eliminarlo.
+- **🔑 Páginas Elementor (PYS y Raditech): editar `_elementor_data`, no `post_content`.** El contenido visible vive en el postmeta `_elementor_data` (Elementor lo renderiza vía su filtro `the_content` e ignora `post_content`). `_elementor_data` SÍ es editable por wp/v2 `meta`: `GET ?context=edit` → `JSON.parse` → editar (URL del hero, o `settings.editor` del widget `text-editor`) → `JSON.stringify` → `POST {meta:{_elementor_data:...}}`. **SIEMPRE** después: `Elementor → Tools → "Clear Files & Data"` (cachea el render de elementos y la edición REST no lo invalida) + purgar LiteSpeed. Sin el clear de Elementor, nada se ve aunque la BD esté correcta.
+- **Optimizar imágenes con `<canvas>` del navegador** (para SVG/base64 que LiteSpeed Image Optimization no toca): cargar `<img>` → `canvas.drawImage` (redimensionar) → `canvas.toBlob(b,'image/webp',0.8)` → subir con `POST /wp-json/wp/v2/media` (X-WP-Nonce + Content-Disposition). Ej. hero Raditech 1.5 MB SVG → 47.5 KB WebP.
+- **⚠️ WooCommerce Quick Edit BORRA campos no fijados** (en estos sitios no precarga `_sku/_regular_price/_stock_status` → salen vacíos y al guardar los borra). Si se usa Quick Edit, fijar EXPLÍCITAMENTE todos los campos a preservar. Verificar precio/stock vía Store API después.
+- **`_elementor_data` y `slug` editables por wp/v2; `_sku` NO** (meta protegida → usar Quick Edit). El agente SEO web no puede setear sku ni slug.
+- **PageSpeed/CrUX:** PYS, PTM y Raditech **no tienen datos de campo (CrUX)** por bajo tráfico → INP real no disponible (es métrica solo de campo); usar datos de **laboratorio** (LCP/CLS) y considerar RUM (`web-vitals` → GA4) para INP real.
 
 ## Bitácora — 2026-06-23 · Sesión SEO grande (PYS + Raditech)
 
@@ -59,6 +66,17 @@ Operando el agente SEO (GSC vía Railway, edición vía navegador wp-admin). Cub
 - **Rank Math meta** no está en REST wp/v2 estándar → usar `POST {root}rankmath/v1/updateMeta` con X-WP-Nonce=window.rankMath.restNonce (en el editor del post). Setear rank_math_title literal omite el template de sitename.
 - **Theme File Editor** (grupoptm): NO persiste con form.submit() → usar `wp.ajax.post('edit-theme-plugin-file', {nonce,file,theme,newcontent})`.
 - **Indexing API** (request-indexing) bloqueada: el SA gsc-indexing@tanus-498105 no es propietario en las propiedades GSC → 403. Solicitar indexación es manual en la UI con la cuenta dueña.
+
+## Bitácora — 2026-06-23 (II) · Catálogo PYS, LCP Raditech, Omega-3 Elementor
+
+Detalle completo en [[2026-06-23 — PYS SKU y Precios, Raditech LCP, Omega-3 Elementor]].
+
+- **PYS catálogo:** 16 SKU asignados (esquema `PREFIX-DOSIS`, fluyen al Product schema); MOTS-c slugs cruzados corregidos (slug cycling wp/v2); Agua Bacteriostática slug `3ml`. Product schema: los 16 YA lo tenían (agente dio falso negativo).
+- **⚠️ Incidente:** WooCommerce Quick Edit borró precios (15 a $0) y stock al guardar SKU → detectado y restaurado 16/16. (Quick Edit no precarga `_sku/_regular_price/_stock_status`.)
+- **Raditech hero LCP 10.5→2.6 s:** el "SVG" hero era 1.5 MB (raster base64) → WebP 47.5 KB con canvas, swap en `_elementor_data` + Clear Files & Data + LiteSpeed.
+- **Omega-3 PYS:** descripción rica + 6 FAQs publicada editando el widget `text-editor` de `_elementor_data` + Clear Files & Data.
+- **Gran lección:** PYS y Raditech son **Elementor** → editar `_elementor_data` (no post_content) y SIEMPRE limpiar caché de Elementor (ver Técnicas documentadas).
+- **PYS imágenes:** QUIC.cloud activado (WebP + auto cron, sin CDN), optimización en curso → **pendiente** re-medir PageSpeed cuando termine.
 
 ## Bitácora — 2026-06-14 · grupoptm.com (limpieza)
 
