@@ -56,6 +56,21 @@ Raditech, PYS y PTM comparten stack SEO similar (WordPress + Rank Math).
 - Firma 'Médico Radiólogo / PACS-RIS' en Raditech: CANCELADA por usuario — se mantiene
 - No hay pendientes activos en grupoptm.com — plugin PTM Custom v2.4 completo y limpio
 
+## Bitácora — 2026-06-22 · Schema MedicalOrganization (grupoptm + Raditech)
+
+**Qué se hizo**
+- **grupoptm.com**: el `MedicalOrganization` que vivía en `functions.php` (Astra) se **migró al plugin hefo** (`options[head]`, site-wide) y se **enriqueció** con `@id`, `logo` (300x300) e `image`. Quitada la función `grupoptm_organization_schema` de functions.php; conservada `grupoptm_page_schema_and_og` (MedicalWebPage+OG). Sin contacto/dirección/sameAs por decisión del usuario.
+- **raditech.mx**: creado `MedicalOrganization` nuevo vía **snippet WPCode HTML id 948** (site_wide_header). Adaptado a teleradiología: `medicalSpecialty: Radiology`, email/tel/address (Tamaulipas 150A, Hipódromo Condesa, CDMX 06140), servicios Teleradiología 24/7 + Alta Especialidad.
+- Verificado en vivo: 1 solo MedicalOrganization por sitio, JSON válido.
+
+**Decisiones técnicas / gotchas**
+- 🔴 **Theme File Editor de grupoptm NO guarda con `form.submit()`** (WP moderno usa AJAX). Usar `wp.ajax.post('edit-theme-plugin-file', {nonce, file, theme:'astra', newcontent})`. Verificar releyendo el editor fresh (lee disco). Corrige el gotcha viejo del submit.
+- Para schema en `<head>`: grupoptm → plugin **hefo**; raditech → **WPCode**. Ambos sobreviven a updates del tema (mejor que functions.php).
+
+**Pendiente**
+- 🐛 La página `/contacto/` de **grupoptm.com** muestra datos de **Raditech** (email info@raditech.mx, dirección Venustiano Carranza, texto teleradiología). Corregir con datos reales de PTM.
+- Búsqueda Console del agente SEO ya funciona para PYS/Raditech/PTM.
+
 ## MOCs de proyecto
 [[MOC - Raditech]] | [[MOC - Ecosistema PTM-PYS]]
 
