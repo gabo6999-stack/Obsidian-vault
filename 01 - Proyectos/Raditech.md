@@ -30,7 +30,7 @@ agente-blogs: https://web-production-2809e.up.railway.app
 | 881 | /portal-x-card/ | ✅ Optimizado |
 | 894 | /teleradiologia-tomografia-cardiaca/ | ✅ Optimizado |
 | 892 | /teleradiologia-resonancia-cardiovascular/ | ✅ Optimizado |
-| 10 | / (home) | ⏳ Pendiente — remover referencia Grupo PTM |
+| 10 | / (home) | ✅ Optimizado — autor corregido a Dr. Antonio Gavito |
 
 ## Flujo correcto para editar landings con HTML grande (>30KB)
 
