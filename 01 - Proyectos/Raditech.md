@@ -25,11 +25,11 @@ agente-blogs: https://web-production-2809e.up.railway.app
 | 883 | /sistema-pacs-ris/ | ✅ Optimizado |
 | 874 | /teleradiologia-alta-especialidad/ | ✅ Optimizado |
 | 890 | /sistema-his-medsi/ | ✅ Optimizado |
-| 879 | /monitores-medicos-radiologia/ | ⏳ Pendiente |
-| 871 | /servicio-teleradiologia/ | ⏳ Pendiente |
-| 881 | /portal-x-card/ | ⏳ Pendiente |
-| 894 | /teleradiologia-tomografia-cardiaca/ | ⏳ Pendiente SEO (contenido OK) |
-| 892 | /teleradiologia-resonancia-cardiovascular/ | ⏳ Pendiente |
+| 879 | /monitores-medicos-radiologia/ | ✅ Optimizado |
+| 871 | /servicio-teleradiologia/ | ✅ Optimizado |
+| 881 | /portal-x-card/ | ✅ Optimizado |
+| 894 | /teleradiologia-tomografia-cardiaca/ | ✅ Optimizado |
+| 892 | /teleradiologia-resonancia-cardiovascular/ | ✅ Optimizado |
 | 10 | / (home) | ⏳ Pendiente — remover referencia Grupo PTM |
 
 ## Flujo correcto para editar landings con HTML grande (>30KB)
