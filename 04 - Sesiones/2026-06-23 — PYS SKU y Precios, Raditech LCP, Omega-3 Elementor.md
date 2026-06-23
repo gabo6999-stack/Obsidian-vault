@@ -48,7 +48,7 @@ relacionado: [[PYS Ecommerce]], [[Raditech]], [[Agente SEO GSC]], [[Ecommerce Ag
 - [ ] **PYS:** re-medir PageSpeed + purgar LiteSpeed cuando termine la optimización de imágenes QUIC.cloud (en curso)
 - [ ] **Brand** en Product schema de los 16 (existe taxonomía `product_brand` pero Rank Math no la emite — requiere asignar término + mapeo)
 - [ ] **FAQPage schema** del Omega-3 (las FAQs ya son visibles, pero el JSON-LD FAQPage no se autogenera del widget de texto)
-- [ ] **Reactivar caché de objetos de Raditech** — hecho por el usuario al cierre
+- [x] **Reactivar caché de objetos de Raditech** — hecho por el usuario al cierre
 
 ---
 
