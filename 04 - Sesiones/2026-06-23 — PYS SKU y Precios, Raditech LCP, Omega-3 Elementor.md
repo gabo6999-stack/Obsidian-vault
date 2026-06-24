@@ -46,7 +46,7 @@ relacionado: [[PYS Ecommerce]], [[Raditech]], [[Agente SEO GSC]], [[Ecommerce Ag
 - [x] Raditech hero WebP (LCP 10.5→2.6 s) en vivo
 - [x] Omega-3 contenido rico + 6 FAQs en vivo (vía Elementor)
 - [ ] **PYS:** re-medir PageSpeed + purgar LiteSpeed cuando termine la optimización de imágenes QUIC.cloud (en curso)
-- [~] **Brand** en Product schema de los 16 — TÉRMINOS YA ASIGNADOS (5 Nutricost + 11 PyS) vía endpoint `/pys-assign-house-brand` (2026-06-23). FALTA solo el **mapeo global** en Rank Math (Titles & Meta → Products → Product Brand → taxonomía `product_brand` → Guardar + purgar). Sin el mapeo, el schema Product por defecto NO emite brand (confirmado: solo Omega-3 lo emite porque tiene custom schema FAQPage). Marca propia decidida: **PyS** para péptidos; NAD+ es Nutricost.
+- [x] **Brand** en Product schema de los 16 — COMPLETO (2026-06-23). 5 Nutricost + 11 PyS, los 16 emiten `brand` en el schema. Dos partes: (1) términos asignados vía endpoint `/pys-assign-house-brand`; (2) **fix raíz** = activar **Rank Math → Ajustes Generales → WooCommerce → "Select Brand" = Marcas** (`product_brand`), que estaba en "Ninguno" — por eso el schema Product por defecto no emitía brand. Tras guardar + purgar LSCache + Object Cache, los 16 emiten. Marca propia: **PyS** para péptidos; **NAD+ es Nutricost** (corregido, su nombre lleva Nutricost).
 - [x] **FAQPage schema** del Omega-3 (1151) — inyectado vía `rank_math_schema_FAQPage` (meta_data wc/v3), 6 Q&A integradas en el `@graph` de Rank Math como `["WebPage","FAQPage"]`. Verificado en HTML.
 - [x] **Reactivar caché de objetos de Raditech** — hecho por el usuario al cierre
 
