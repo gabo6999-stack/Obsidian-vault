@@ -69,3 +69,9 @@ Revisada firma 'Médico Radiólogo / PACS-RIS' en posts de blog. Usuario decidi�
 
 ## Sesión 2026-06-14 — Redirects 301 (corrección)
 **Corrección importante:** la nota "SEO 100/100 / 9 redirects activos" del 13-jun era inexacta — 7 de 8 redirects daban 404. Causa: `_wp_old_slug` es meta protegido y la REST API ignoraba los writes. Solución: snippet WPCode PHP "Redirects 301 old-slugs Raditech" (ID 932) con `template_redirect` + mapa + `wp_safe_redirect(...,301)`. **8/8 verificados (anónimo y logueado)**. También: eliminado el snippet roto 931 que imprimía PHP como texto en el sitio, y purgada la caché LiteSpeed. Gotchas: WPCode requiere 2.º guardado para ejecutar; la caché privada de LiteSpeed engaña al admin. Ver [[2026-06-14 — Raditech]].
+
+
+---
+
+## Sesión 2026-06-24 — Fix canibalización (header/footer) + loop 874
+Diagnosticada canibalización: el tema custom (markup `rt-`, inyectado vía WPCode snippets 867 Header / 870 Footer, NO archivos de tema) enlazaba a slugs viejos en cada página. Migrados los 6 slugs viejos→nuevos en ambos snippets. Eliminado el loop 301 de la landing 874 (`/teleradiologia-alta-especialidad/`), causado por una regla de Rank Math Redirections que apuntaba a sí misma (148 hits) → ahora 200 OK. Purgado LiteSpeed, verificado anónimo. Pendiente: cards `rt-btn` del home (página 10, contenido Elementor). Ver [[2026-06-24 — Raditech]].
