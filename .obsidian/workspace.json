@@ -31,10 +31,14 @@
             "id": "f56382958e89297b",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Vista gráfica"
+              "type": "markdown",
+              "state": {
+                "file": "01 - Proyectos/Arcade Motors MX.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Arcade Motors MX"
             }
           }
         ],
@@ -111,6 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "01 - Proyectos/Arcade Motors MX.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +125,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes"
+              "title": "Enlaces entrantes de Arcade Motors MX"
             }
           },
           {
@@ -200,8 +205,8 @@
   },
   "active": "f56382958e89297b",
   "lastOpenFiles": [
-    "01 - Proyectos/Arcade Motors MX.md.tmp.14256.f0425b1373ec",
     "01 - Proyectos/Arcade Motors MX.md",
+    "01 - Proyectos/Arcade Motors MX.md.tmp.14256.f0425b1373ec",
     "01 - Proyectos/Raditech.md",
     "conflict-files-obsidian-git.md",
     "Diario/2026-06-24.md",
@@ -232,7 +237,6 @@
     "04 - Sesiones/2026-06-09 - Raditech GSC.md.tmp.5828.fedfb26190e9",
     "04 - Sesiones/2026-06-13 - Raditech SEO Score 100.md.tmp.5828.de689101a23a",
     "04 - Sesiones/2026-06-13 - Raditech SEO Redirects.md.tmp.5828.da0e7d1b63f2",
-    "04 - Sesiones/2026-06-08 — Agente SEO PTM Cross-linking.md.tmp.5828.18a75d321ca9",
     "2026-06-08.md",
     "04 - Sesiones/2026-06-13 Fix avatar author box grupoptm.md",
     "04 - Sesiones/MOC - SEO.md",
