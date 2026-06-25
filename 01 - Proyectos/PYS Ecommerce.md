@@ -50,3 +50,13 @@ Tienda WooCommerce con enfoque SEO que vende péptidos y suplementos. **Empresa 
 En Raditech se perfeccionó técnica para redirects 301 en WordPress via slug cycling REST API (Rank Math auto-genera la entrada). También: cookie+nonce > JWT para Rank Math REST, purge LiteSpeed via nonce admin panel. Estas técnicas aplican igual en peptidosysuplementos.mx. Ver [[2026-06-13 - Raditech SEO Score 100]].
 ## Nota 2026-06-19 — Calculadora de Dosis de Péptidos
 Se publicó la **Calculadora de Dosis de Péptidos** (`/calculadora-de-dosis-de-peptidos/`, post 2040) — widget HTML autocontenido en Elementor que replica la UX de particlepeptides.com en español (jeringas/viales SVG, toggle mcg/mg, regla con marcador). Botón "Calculadora" añadido al menú del header (template Elementor **#1099**, widget HTML `c442c6a` — el header NO usa menú de WP). Ver [[2026-06-19 — PYS Calculadora de Dosis]].
+
+---
+
+## Sesión 2026-06-23 — Catálogo (SKU, slugs, precios) + Omega-3 + imágenes
+- **SKU** asignados a los 16 productos (esquema `PREFIX-DOSIS`; fluyen al Product schema de Rank Math). Los 16 YA tenían Product schema (el agente dio falso negativo — su `fetch_url` no ve el JSON-LD).
+- **MOTS-c** slugs cruzados corregidos (793=40mg→`/mots-c-40mg/`, 790=10mg→`/mots-c-10mg/`, slug cycling wp/v2). **Agua Bacteriostática** slug → `agua-bacteriostatica-3ml`.
+- **⚠️ Incidente:** WooCommerce Quick Edit borró precios (15 a $0) y stock al guardar SKU → **restaurado 16/16**. Quick Edit no precarga `_sku/_regular_price/_stock_status`; fijarlos siempre.
+- **Omega-3 (1151):** descripción rica (~450 palabras, H2, specs EPA 1,200/DHA 850, 6 FAQs) publicada **editando el widget `text-editor` de `_elementor_data`** (no post_content) + Elementor "Clear Files & Data" + LiteSpeed. 🔑 **El contenido visible de los productos vive en `_elementor_data`** — matiza la convención de arriba: el TEXTO sí se puede editar por API vía `_elementor_data` (siempre limpiar caché Elementor después), no solo title/meta/slug.
+- **Imágenes:** QUIC.cloud activado (WebP + auto cron, sin CDN); home tenía ~4.6 MB de imágenes. Optimización en curso → **pendiente** re-medir PageSpeed + purgar LiteSpeed al terminar.
+- Ver [[2026-06-23 — PYS SKU y Precios, Raditech LCP, Omega-3 Elementor]].

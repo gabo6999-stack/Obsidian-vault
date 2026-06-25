@@ -1,6 +1,6 @@
 ---
 tags: [moc, seo]
-actualizado: 2026-06-14
+actualizado: 2026-06-23
 ---
 
 # MOC SEO
@@ -16,10 +16,12 @@ Raditech, PYS y PTM comparten stack SEO similar (WordPress + Rank Math).
 - [[2026-06-10 — Raditech Landing Tomografia Cardiaca]]
 - [[2026-06-13 - Raditech SEO Redirects]] — 8/8 redirects 301 vía slug cycling
 - [[2026-06-13 - Raditech SEO Score 100]]
+- [[2026-06-23 — PYS SKU y Precios, Raditech LCP, Omega-3 Elementor]] — LCP hero 10.5→2.6 s (WebP)
 
 ## Sesiones — PTM / PYS
 - [[2026-06-08 — Agente SEO PTM Cross-linking]]
 - [[2026-06-08 — Agente Blogs PTM]]
+- [[2026-06-23 — PYS SKU y Precios, Raditech LCP, Omega-3 Elementor]] — SKU 16, slugs MOTS-c/Agua, Omega-3 Elementor
 
 ## Sesiones — grupoptm.com
 - [[2026-06-13 SEO grupoptm Raditech]]
@@ -33,6 +35,48 @@ Raditech, PYS y PTM comparten stack SEO similar (WordPress + Rank Math).
 - **Purge LiteSpeed** vía nonce del admin panel
 - **Plugin Editor de WP (CodeMirror):** usar `cmObj.setValue()` (instancia CM), NO `textarea.value`, para que el form envíe el contenido actualizado. La primera edición vía `textarea.value` no funciona: CodeMirror ignora el cambio y el form envía el contenido original.
 - **Hook `admin_init` temporal** en un plugin para operaciones de filesystem cuando WP File Manager da error de permisos: agregar el hook vía Plugin Editor, ejecutar una vez y eliminarlo.
+- **🔑 Páginas Elementor (PYS y Raditech): editar `_elementor_data`, no `post_content`.** El contenido visible vive en el postmeta `_elementor_data` (Elementor lo renderiza vía su filtro `the_content` e ignora `post_content`). `_elementor_data` SÍ es editable por wp/v2 `meta`: `GET ?context=edit` → `JSON.parse` → editar (URL del hero, o `settings.editor` del widget `text-editor`) → `JSON.stringify` → `POST {meta:{_elementor_data:...}}`. **SIEMPRE** después: `Elementor → Tools → "Clear Files & Data"` (cachea el render de elementos y la edición REST no lo invalida) + purgar LiteSpeed. Sin el clear de Elementor, nada se ve aunque la BD esté correcta.
+- **Optimizar imágenes con `<canvas>` del navegador** (para SVG/base64 que LiteSpeed Image Optimization no toca): cargar `<img>` → `canvas.drawImage` (redimensionar) → `canvas.toBlob(b,'image/webp',0.8)` → subir con `POST /wp-json/wp/v2/media` (X-WP-Nonce + Content-Disposition). Ej. hero Raditech 1.5 MB SVG → 47.5 KB WebP.
+- **⚠️ WooCommerce Quick Edit BORRA campos no fijados** (en estos sitios no precarga `_sku/_regular_price/_stock_status` → salen vacíos y al guardar los borra). Si se usa Quick Edit, fijar EXPLÍCITAMENTE todos los campos a preservar. Verificar precio/stock vía Store API después.
+- **`_elementor_data` y `slug` editables por wp/v2; `_sku` NO** (meta protegida → usar Quick Edit). El agente SEO web no puede setear sku ni slug.
+- **PageSpeed/CrUX:** PYS, PTM y Raditech **no tienen datos de campo (CrUX)** por bajo tráfico → INP real no disponible (es métrica solo de campo); usar datos de **laboratorio** (LCP/CLS) y considerar RUM (`web-vitals` → GA4) para INP real.
+
+## Bitácora — 2026-06-23 · Sesión SEO grande (PYS + Raditech)
+
+Operando el agente SEO (GSC vía Railway, edición vía navegador wp-admin). Cubre 3 sitios.
+
+### peptidosysuplementos.mx (PYS)
+- **Análisis GSC de caídas** (método: searchAnalytics API 2 períodos + URL Inspection, credenciales en Railway proyecto Agente-SEO). Causa raíz: reestructuración de URLs en curso, NO una página.
+- 🔴 **Bomba de tiempo desactivada**: `/precio-de-retatruida-en-mexico/` (página #1, 7 de 13 clicks) hacía 301 al PRODUCTO. Cambiado a redirigir al artículo de contenido **1647** `/retatrutide-precio-guia-completa-costos-beneficios/` (plugin **Redirection**, reglas id 2 e id 3). Consolidada la canibalización de "retatrutida".
+- **Titles/meta optimizados** (vía Rank Math `rankmath/v1/updateMeta`): art. 1647 ("Retatrutida en México: Precio, Beneficios y Guía 2026") y **home page 21** ("Comprar Péptidos en México | Alta Pureza y Trazabilidad | PyS") — antes el title de la home no mencionaba México/comprar aunque el H1 sí.
+- Indexación solicitada (manual, usuario). Investigación home/productos: están sanas, la "caída" de /productos/ es ruido estadístico (long-tail geográfico marginal). tirzepatida: sin mismatch real (página correcta ya pos 1.4).
+- **Conclusión**: on-page de PYS esencialmente completo; el cuello de botella es autoridad/backlinks (sitio nuevo + ~70 backlinks perdidos en la desvinculación).
+
+### raditech.mx
+- **GEO (tarea 4.2)**: reescritos primeros párrafos a "respuesta directa" (AI Overviews) en 4 blogs del nicho (#819, #842, #941, #636). Edición vía REST wp/v2/posts con nonce (posts son HTML clásico, no Gutenberg).
+- **Off-topic**: #706 hipotensión (11,403 imp) y #742 analgésicos (5,675 imp) son las páginas de más tráfico PERO es **tráfico vanidad** (long-tail salud-consumidor, audiencia equivocada, sin AdSense) → NO eliminar, no invertir. Solo 9.9% de impresiones del sitio son nicho B2B real.
+- **E-E-A-T confirmado**: posts firmados Dr. Antonio Gavito Hernández - Médico Radiólogo (schema author + meta + byline).
+- **Mapeo de nicho**: NO hay canibalización (slugs viejos ya consolidados con 301 vía snippet WPCode **932**). 🔴→✅ **Fix crítico**: `/teleradiologia-de-alta-especialidad/` daba **404** siendo la URL de mejor rendimiento de nicho ("pacs ptm", "teleradiologia mexico"); agregada al mapa del snippet 932 → 301 a /teleradiologia-alta-especialidad/. Gotcha: WPCode requiere 2º Update + purgar LiteSpeed (cachea el 404).
+- Pendiente: CTR de nicho ~1% (mejorar titles/metas landings core); arrastre de marca "pacs ptm" → reforzar identidad Raditech.
+
+### grupoptm.com
+- Pendiente detectado: la página `/contacto/` muestra datos de Raditech (email info@raditech.mx, dirección Venustiano Carranza, texto teleradiología).
+
+### Técnicas/gotchas nuevos de la sesión
+- **Rank Math meta** no está en REST wp/v2 estándar → usar `POST {root}rankmath/v1/updateMeta` con X-WP-Nonce=window.rankMath.restNonce (en el editor del post). Setear rank_math_title literal omite el template de sitename.
+- **Theme File Editor** (grupoptm): NO persiste con form.submit() → usar `wp.ajax.post('edit-theme-plugin-file', {nonce,file,theme,newcontent})`.
+- **Indexing API** (request-indexing) bloqueada: el SA gsc-indexing@tanus-498105 no es propietario en las propiedades GSC → 403. Solicitar indexación es manual en la UI con la cuenta dueña.
+
+## Bitácora — 2026-06-23 (II) · Catálogo PYS, LCP Raditech, Omega-3 Elementor
+
+Detalle completo en [[2026-06-23 — PYS SKU y Precios, Raditech LCP, Omega-3 Elementor]].
+
+- **PYS catálogo:** 16 SKU asignados (esquema `PREFIX-DOSIS`, fluyen al Product schema); MOTS-c slugs cruzados corregidos (slug cycling wp/v2); Agua Bacteriostática slug `3ml`. Product schema: los 16 YA lo tenían (agente dio falso negativo).
+- **⚠️ Incidente:** WooCommerce Quick Edit borró precios (15 a $0) y stock al guardar SKU → detectado y restaurado 16/16. (Quick Edit no precarga `_sku/_regular_price/_stock_status`.)
+- **Raditech hero LCP 10.5→2.6 s:** el "SVG" hero era 1.5 MB (raster base64) → WebP 47.5 KB con canvas, swap en `_elementor_data` + Clear Files & Data + LiteSpeed.
+- **Omega-3 PYS:** descripción rica + 6 FAQs publicada editando el widget `text-editor` de `_elementor_data` + Clear Files & Data.
+- **Gran lección:** PYS y Raditech son **Elementor** → editar `_elementor_data` (no post_content) y SIEMPRE limpiar caché de Elementor (ver Técnicas documentadas).
+- **PYS imágenes:** QUIC.cloud activado (WebP + auto cron, sin CDN), optimización en curso → **pendiente** re-medir PageSpeed cuando termine.
 
 ## Bitácora — 2026-06-14 · grupoptm.com (limpieza)
 
@@ -55,6 +99,26 @@ Raditech, PYS y PTM comparten stack SEO similar (WordPress + Rank Math).
 **Estado / próximos pasos**
 - Firma 'Médico Radiólogo / PACS-RIS' en Raditech: CANCELADA por usuario — se mantiene
 - No hay pendientes activos en grupoptm.com — plugin PTM Custom v2.4 completo y limpio
+
+## Bitácora — 2026-06-22 · Schema MedicalOrganization (grupoptm + Raditech)
+
+**Qué se hizo**
+- **grupoptm.com**: el `MedicalOrganization` que vivía en `functions.php` (Astra) se **migró al plugin hefo** (`options[head]`, site-wide) y se **enriqueció** con `@id`, `logo` (300x300) e `image`. Quitada la función `grupoptm_organization_schema` de functions.php; conservada `grupoptm_page_schema_and_og` (MedicalWebPage+OG). Sin contacto/dirección/sameAs por decisión del usuario.
+- **raditech.mx**: creado `MedicalOrganization` nuevo vía **snippet WPCode HTML id 948** (site_wide_header). Adaptado a teleradiología: `medicalSpecialty: Radiology`, email/tel/address (Tamaulipas 150A, Hipódromo Condesa, CDMX 06140), servicios Teleradiología 24/7 + Alta Especialidad.
+- Verificado en vivo: 1 solo MedicalOrganization por sitio, JSON válido.
+
+**Decisiones técnicas / gotchas**
+- 🔴 **Theme File Editor de grupoptm NO guarda con `form.submit()`** (WP moderno usa AJAX). Usar `wp.ajax.post('edit-theme-plugin-file', {nonce, file, theme:'astra', newcontent})`. Verificar releyendo el editor fresh (lee disco). Corrige el gotcha viejo del submit.
+- Para schema en `<head>`: grupoptm → plugin **hefo**; raditech → **WPCode**. Ambos sobreviven a updates del tema (mejor que functions.php).
+
+**Raditech — BreadcrumbList 3 niveles**
+- Las 9 landings de producto ya tenían BreadcrumbList de Rank Math (2 niveles, "Home > título con | Raditech", sin migas visibles en Elementor).
+- Solución sin duplicar: **snippet WPCode PHP id 949** con filtro `rank_math/json_ld` que reescribe el itemListElement a 3 niveles `Inicio > Productos > [nombre corto]`. Verificado en las 9 (canónica + cache-bust). Caché LiteSpeed purgada.
+- Técnica reutilizable: **modificar el JSON-LD de Rank Math vía su filtro `rank_math/json_ld`** en vez de crear schema nuevo → evita duplicados y mantiene consistencia.
+
+**Pendiente**
+- 🐛 La página `/contacto/` de **grupoptm.com** muestra datos de **Raditech** (email info@raditech.mx, dirección Venustiano Carranza, texto teleradiología). Corregir con datos reales de PTM.
+- Búsqueda Console del agente SEO ya funciona para PYS/Raditech/PTM.
 
 ## MOCs de proyecto
 [[MOC - Raditech]] | [[MOC - Ecosistema PTM-PYS]]
