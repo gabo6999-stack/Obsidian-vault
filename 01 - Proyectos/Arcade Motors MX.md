@@ -27,7 +27,7 @@ carpeta: C:\Users\gabom\autos-alv\
 - Prototipo aprobado: `preview-arcade.html`. Descartados: Matrix verde + 80s synthwave.
 
 ## Estructura
-- Páginas: **index** (hero terminal), **buscar** (filtros catálogo), **anuncio** (?id), **publicar** (POST, cascade), **planes**, **gestionar** (?token, sin login), **registro / ingresar / cuenta** (cuentas de usuario)
+- Páginas: **index** (hero terminal), **buscar** (filtros catálogo), **anuncio** (?id), **publicar** (POST, cascade; **requiere login + correo verificado**), **planes**, **gestionar** (?token + **login + ser el dueño**), **registro / ingresar / cuenta / verificar** (cuentas de usuario)
 - Admin en `/admin` (setup→login→dashboard), sesión independiente de las cuentas de usuario
 - Bandera `COBRO_ACTIVO` en config.php: `false` = 100% gratis (oculta PLANES); `true` = Fase 2 freemium
 - Leyenda obligatoria: "Publica gratis" + "sin comisiones por venta". NUNCA "gratuito"/"100% gratis" (en Fase 2 sí cobra).
@@ -87,6 +87,18 @@ Cierres del pulido del home (todos EN VIVO, verificados en el teléfono del usua
 - **Hero "ARCADE MOTORS MX" se cortaba SIEMPRE en móvil:** el markup (`index.php`) usa `&nbsp;` entre palabras (espacios duros que impiden el salto de línea) → no cabía y se desbordaba. Fix en archivos aislados: **fx.js** convierte `&nbsp;`→espacio normal SOLO en los nodos de texto de `.bigwm` (conserva el `<span>` de MX) + **fx.css** `@media(max-width:600px)` baja tamaño y permite wrap. Desktop sin cambio. (Aprendizaje: CSS no puede romper un `&nbsp;` — hay que cambiarlo en JS o en el markup.)
 - **Header se recortaba SIN sesión en móvil:** `.site-header` tenía altura FIJA (`height:var(--header-h)`) + `sticky`; al envolver el contenido a varias filas la nav se cortaba (peor sin sesión, con INGRESAR/REGISTRARTE más anchos). Fix en **styles.css** extendiendo `@media(max-width:760px)`: `.site-header{height:auto;min-height:var(--header-h);padding:8px 0}` + `flex-wrap`/`row-gap`/`gap`. La sesión del buscador YA terminó → OK tocar styles.css; antes de subir verifiqué diff local vs vivo (seguro). Verificado en cel con y sin sesión.
 
+## Sesión 2026-06-26 (cont.) — Publicar fix, gestión segura, legales, verificación de correo
+Detalle completo: [[2026-06-26 — Arcade Motors Publicar fix, Gestion segura, Verificacion correo]].
+- **Fix publicar 500** (`catalog.php` viejo sin `anuncios_tiene_vin()`) + "Mis anuncios" (cuenta.php viejo). **🚀 Breakthrough deploy: API REST del filebrowser** (`/api/raw` + `/api/resources` con JWT de `localStorage`; escribir y borrar con header **`X-Auth`** —el DELETE con `?auth=` da 401—; ruta de dominio addon `domains/arcademotorsmx.com/public_html/`). String-replace quirúrgico por default; base64 para archivos nuevos.
+- **Fotos:** fix EXIF (giro 90° de fotos de celular), reemplazo limpia filas `fotos`, límite 15 visible. **Galería + lightbox** en anuncio.php (vanilla JS/CSS, flechas/teclado/swipe).
+- **Legales** (privacidad.php / terminos.php, deslinde fuerte: AMX = solo tablero de contacto) + **contacto gateado por registro** (anuncio visible sin login; WhatsApp solo logueado; `?volver=` regresa al anuncio).
+- **gestionar.php rediseñado** (Editar / Eliminar; WhatsApp NO por anuncio) + **🔒 SEGURIDAD: login + ser el dueño** (`usuario_id` match; el token ya no basta). publicar.php exige login.
+- **📧 Verificación de correo COMPLETA y EN VIVO:** SMTP Hostinger (cuenta `no-reply@` en plan FREE Business Email), columnas auto `email_verificado`+`verif_token`, **verificar.php** nueva, **publicar bloqueado hasta verificar**, banner en cuenta, reenviar. Cliente SMTP propio en auth.php (ssl://465, AUTH LOGIN; degrada sin romper si falta pass). **Probado: auth 235 / send 250.** Correo con Message-ID + multipart texto/HTML + **header de marca CSS** (renderiza hasta en spam). DNS: **SPF✅ DMARC✅ DKIM pendiente**. Spam de dominio nuevo = normal → marcar "No es spam".
+
 ## Próximos pasos / pendientes (dev)
-- 🐛 **BUG ACTIVO: no se puede publicar — error en el flujo de `publicar.php`** (reportado por el usuario 2026-06-26, lo investigará en otra sesión). **Lead fuerte:** el 2026-06-25 publicar.php quedó **HTTP 500** por un save truncado con el token del filebrowser agonizando (ver "Sesión 2026-06-25 cont."); se re-desplegó por ZIP — **confirmar que el re-deploy quedó íntegro** / revisar el error PHP real de publicar.php (¿truncado otra vez? ¿la columna `usuario_id`? ¿el cascade?).
-- Sembrar **1–3 anuncios demo con foto** para ver en acción los FX de tarjeta (hover sweep, badges cyan/magenta, título destacado verde, placeholder neón) y el odómetro contando — hoy invisibles con 0 anuncios.
+- ✅ **RESUELTO (2026-06-26): el bug de publicar era el `catalog.php` del server VIEJO** (le faltaba `anuncios_tiene_vin()`, llamada dentro del POST → 500 solo al publicar; el GET cargaba bien). Re-subido el catalog.php local; verificado end-to-end.
+- **Editar perfil (cuenta.php) + mover WhatsApp a nivel perfil** (hoy NO editable por anuncio, a propósito).
+- ✅ **DKIM ACTIVADO (2026-06-26):** hPanel → Emails → arcademotorsmx.com → Mailboxes → Custom DKIM → "Generate DKIM record" (Hostinger lo agregó solo al DNS; TXT en `hostingermail1._domainkey` con llave RSA, verificado). Ya están **SPF✅ DKIM✅ DMARC✅**.
+- **KYC** compradores/vendedores + **anti-abuso "sube y sube gratis"** (Fase 2): caducidad 30d + 1 gratis por identidad-KYC + 1 activo por VIN + límite por teléfono.
+- **Verificación de correo por email** del usuario en registro (¿parte del KYC?) — la verificación de correo electrónico ya quedó hecha esta sesión.
+- Sembrar **1–3 anuncios demo con foto** para ver los FX de tarjeta (hover sweep, badges, título verde, placeholder neón) y el odómetro — hoy invisibles con 0 anuncios.
