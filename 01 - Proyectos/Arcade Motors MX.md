@@ -66,6 +66,10 @@ carpeta: C:\Users\gabom\autos-alv\
 - **Renovar el plan Cloud Professional** (vence **2026-07-07**; sin renovar, arcademotorsmx.com se cae con el plan).
 - Cambiar contraseñas temporales (BD `Alv_Crt7xK2mPq9wR`, admin `Alv_Admin_2026`).
 - (Email del dominio: ✅ ya verificado por el usuario.)
+- **Crear más correos de @arcademotorsmx.com** (hoy solo existe `no-reply@`):
+  - 🔴 **`contacto@` URGENTE** — ya está referenciado EN VIVO (Aviso de Privacidad/ARCO, footer "Contacto", cuenta.php) → si alguien escribe, **rebota**.
+  - Otros recomendados: `redes@` (redes sociales), `soporte@`/`ayuda@` (soporte), `ventas@`/`lotes@` (B2B lotes/agencias), `hola@`/`info@` (genérico), `facturacion@` (Fase 2 cobros).
+  - 💡 **Plan FREE Business Email = 1 solo buzón** (ya lo usa no-reply). Opciones: **reenvíos/alias gratis** (contacto@ → reenvía al correo principal del usuario, lo más fácil + resuelve lo urgente) o **plan de email de pago** para buzones separados. Crear en hPanel → Emails.
 
 ---
 
