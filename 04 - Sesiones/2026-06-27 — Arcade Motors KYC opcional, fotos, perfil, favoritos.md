@@ -51,5 +51,31 @@ Proyecto: [[Arcade Motors MX]] · Sesión larga. Todo **desplegado EN VIVO y ver
 - El token muere si su pestaña se cierra o pasa rato inactiva → en sesiones largas, reabrir.
 
 ## Pendientes para la próxima
-- ⚠️ **Renovar hosting Cloud Professional** (vence 2026-07-07).
-- WhatsApp OTP (al pasar a cobros), **KYC INE (Fase B)**, anti-abuso "sube y sube gratis", auto-edición de fotos con IA, badge en las tarjetas del grid (no solo en el detalle).
+- ✅ **Hosting Cloud Professional pagado hasta 2027-07-07** (verificado en hPanel 2026-06-27; la fecha 2026-07-07 era incorrecta — ya no es pendiente urgente).
+- WhatsApp OTP (al pasar a cobros), **KYC INE (Fase B)**, anti-abuso "sube y sube gratis", auto-edición de fotos con IA.
+
+## 7. Badge "✓ Verificado" en las tarjetas del grid (2026-06-27, EN VIVO ✓)
+- Helper `usuario_esta_verificado(int $uid)` en functions.php (caché estática por request, 1 query por dueño) + chip verde **"✓ Verificado"** en la esquina inferior-izq de la foto del `car_card` (CSS `.seller-verif` en amx-fix.css). Misma lógica que el detalle: `email_verificado && telefono_verificado`.
+- **Verificado por DOM en anónimo:** 3 chips, `rgba(25,160,100,.92)`, `bottom/left:10px`, fuente VT323.
+- **Deploy:** read-modify-write **dentro de la página** del filebrowser (fetch GET `/api/raw` → string-replace idempotente → POST `/api/resources?override=true` con `X-Auth`), todo con el JWT sin salir del navegador → UTF-8 (emojis/acentos) intacto, 0 corrupción base64. **Clave:** `base = location.pathname.split('/files')[0]` (el prefijo `/<token>`), sin él da 403/552.
+- ⚠️ **A decidir:** como el teléfono es opcional y Telcel filtra el SMS, casi nadie tendrá el badge a futuro (la cuenta del usuario lo tiene de las pruebas). Opciones: dejarlo "premium", cambiarlo a solo-correo, o reservarlo al KYC INE.
+
+## 8. Fix buscador: marca de primer nivel (2026-06-27, EN VIVO ✓)
+- **Bug (lo notó el usuario):** "Marcas populares" → `buscar.php?marca=Ford` mostraba los 3 anuncios, no filtraba a Ford.
+- **Causa:** en `$cat_mode`, la sanitización de cascada borraba `$f_marca` cuando no venía `categoria` (los links de marca no la traen).
+- **Fix:** `cat_todas_las_marcas()` en catalog.php + en buscar.php la marca se valida contra TODAS si no hay categoría, y el select de Marca queda siempre habilitado. **Verificado:** `?marca=Ford` → 1 resultado, dropdown "Ford" seleccionado. Cascada intacta.
+- **Hosting:** de paso confirmé en hPanel que Cloud Professional vence **2027-07-07** (no 2026) → corregido en las notas, ya no es pendiente urgente.
+
+## 9. Badge movido a la derecha del precio + lección de deploy (2026-06-27, EN VIVO ✓)
+- A pedido del usuario, el chip "✓ Verificado" se **movió de la esquina de la foto al renglón del precio**, alineado al borde derecho (`$159,000 ⟷ ✓ Verificado`). `.car-card .price{display:flex}` + chip `margin-left:auto` en amx-fix.css; el span pasó del thumb al `<div class="price">`.
+- **🧨 Lección cara:** el filebrowser **per-sitio** ("Acceder a archivos de <sitio>") tiene **READS STALE/cacheados** — devolvía functions.php=9200 / amx-fix.css=472 (viejos) aunque mis writes SÍ habían pegado. Me hizo creer que "no persistía" y casi reescribo una versión de functions.php SIN el helper (= fatal). **Fix:** usar el filebrowser **de CUENTA** ("Accede a todos los archivos de Cloud Professional", prefijo `domains/arcademotorsmx.com/public_html/`) = reads frescos + writes confiables. Verificar SIEMPRE por la ruta de cuenta o `fetch` directo con cache-bust, nunca por el read-back del per-sitio.
+
+## 10. Badge a verde fósforo CRT + grilla "Explora por tipo" (2026-06-27, EN VIVO ✓)
+- El chip "✓ Verificado" se reestilizó a **verde fósforo `#7CFC6B`** con fondo gradiente verde oscuro + borde + glow (igual que el botón INGRESAR, `.btn-login`). Verificado por `getComputedStyle`.
+- Grilla de "Explora por tipo": de `auto-fill` (salían 7+5) → forzada a columnas fijas vía `.cat-grid` en amx-fix.css. Primero 6+6 (12 tipos), luego **4+4** al pasar a 8 clasificaciones.
+
+## 11. "Explora por tipo" → 8 clasificaciones de vehículo + íconos 8-bit (2026-06-27→28, EN VIVO ✓)
+- Reemplazados los 12 tipos de carrocería por las **8 clasificaciones** (= `cat_categorias`): Autos y Camionetas · Motos · Vehículos Pesados · Camiones · Otros Vehículos · Autos de Colección · Náutica · Colectivos y Autobuses. Array `$CLASIFICACIONES` en data.php; `index.php` itera con `data-ico` + `?categoria=`. **Clic → `buscar.php?categoria=X` ya filtrado + dropdown en ese default** (idea de navegación del usuario). Validado: "Autos y Camionetas" → 3 resultados.
+- **Íconos pixel-art:** objeto `ICONS` en `fx.js` (SVG `crispEdges`, `fill=currentColor`); cambié la extracción del slug a `data-ico`. 8 íconos nuevos; **Motos = versión "B"** (relleno: 2 ruedas + asiento + manubrio en T) elegida por el usuario tras 2 iteraciones.
+- ⚠️ Nombres en `cat_categorias.nombre` van **sin acento** → el `?categoria=` usa el valor BD; el tile muestra el acento aparte. (Pendiente opcional: corregir BD a con-acento, y renombrar título "Explora por tipo" → "Explora por categoría".)
+- **🔑 Lección de deploy:** tras escribir un archivo, el `/api/raw` del filebrowser **congela su lectura** (read-after-write stale). Para leer fresco y hacer surgical replace → **abrir un token NUEVO** del filebrowser de cuenta (su 1ª lectura es fresca). Así se desbloqueó el cambio de Motos. Los WRITES sí pegan siempre.

@@ -63,7 +63,7 @@ carpeta: C:\Users\gabom\autos-alv\
 - **`resize_window` de Chrome NO da viewport móvil real** (innerWidth se queda en 1440 → los `@media` no disparan) → verificar fixes móviles por código (regla en vivo + efecto en DOM) + prueba en el teléfono del usuario.
 
 ## ⚠️ Pendientes del usuario (no los puedo hacer yo)
-- **Renovar el plan Cloud Professional** (vence **2026-07-07**; sin renovar, arcademotorsmx.com se cae con el plan).
+- ✅ **Hosting Cloud Professional pagado hasta 2027-07-07** (verificado en hPanel 2026-06-27; la fecha "2026-07-07" era incorrecta — ya NO es pendiente urgente, >1 año de runway).
 - Cambiar contraseñas temporales (BD `Alv_Crt7xK2mPq9wR`, admin `Alv_Admin_2026`).
 - (Email del dominio: ✅ ya verificado por el usuario.)
 - **Crear más correos de @arcademotorsmx.com** (hoy solo existe `no-reply@`):
