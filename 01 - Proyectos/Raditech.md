@@ -73,5 +73,16 @@ Revisada firma 'Médico Radiólogo / PACS-RIS' en posts de blog. Usuario decidi�
 
 ---
 
+## Sesión 2026-06-24 — Fix canibalización (header/footer) + loop 874
+Diagnosticada canibalización: el tema custom (markup `rt-`, inyectado vía WPCode snippets 867 Header / 870 Footer, NO archivos de tema) enlazaba a slugs viejos en cada página. Migrados los 6 slugs viejos→nuevos en ambos snippets. Eliminado el loop 301 de la landing 874 (`/teleradiologia-alta-especialidad/`), causado por una regla de Rank Math Redirections que apuntaba a sí misma (148 hits) → ahora 200 OK. Purgado LiteSpeed, verificado anónimo. Pendiente: cards `rt-btn` del home (página 10, contenido Elementor). Ver [[2026-06-24 — Raditech]].
+
 ## Sesión 2026-06-23 — Performance: LCP del hero 10.5→2.6 s
 El hero de la home (página 10) era un "SVG" de **1.5 MB** (raster PNG/JPG incrustado en base64 → LiteSpeed Image Optimization no lo optimiza). Generado WebP de **47.5 KB** (−96.9%) con canvas del navegador, subido a Multimedia (ID 950), y reemplazada la URL del hero en **`_elementor_data`** (editable por wp/v2 `meta`). Clave: **Elementor → Tools → "Clear Files & Data"** tras editar por REST (Elementor cachea el render). Resultado verificado en PageSpeed: **LCP 10.5→2.6 s, CLS 0.001, FCP 1.8 s, TBT 160 ms**. La home renderiza desde Elementor `_elementor_data`, no desde `post_content`. Ver [[2026-06-23 — PYS SKU y Precios, Raditech LCP, Omega-3 Elementor]].
+
+
+
+
+---
+
+## Sesion 2026-06-24 (tarde)
+Auditoria SEO profunda de raditech.mx: 84 -> 100/100 (33/33). Favicon /favicon.ico arreglado (200), H1 duplicado resuelto en 9 paginas con snippet WPCode 1011, H1 del blog con snippet 1013, ~12 metas/titulos optimizados. Hallazgo: meta core REST (/wp/v2) revierte solo; rankmath/v1/updateMeta persiste. Ver [[2026-06-24 — Raditech]].
