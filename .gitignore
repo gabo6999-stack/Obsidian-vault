@@ -1,0 +1,12 @@
+﻿# Estado volatil de Obsidian (cambia solo, no sincronizar)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/graph.json
+.obsidian/cache
+
+# Basura del plugin Obsidian Git
+conflict-files-obsidian-git.md
+
+# Sistema
+.DS_Store
+Thumbs.db
