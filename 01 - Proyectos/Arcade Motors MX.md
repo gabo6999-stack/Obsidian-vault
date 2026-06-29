@@ -66,10 +66,9 @@ carpeta: C:\Users\gabom\autos-alv\
 - ✅ **Hosting Cloud Professional pagado hasta 2027-07-07** (verificado en hPanel 2026-06-27; la fecha "2026-07-07" era incorrecta — ya NO es pendiente urgente, >1 año de runway).
 - Cambiar contraseñas temporales (BD `Alv_Crt7xK2mPq9wR`, admin `Alv_Admin_2026`).
 - (Email del dominio: ✅ ya verificado por el usuario.)
-- **Crear más correos de @arcademotorsmx.com** (hoy solo existe `no-reply@`):
-  - 🔴 **`contacto@` URGENTE** — ya está referenciado EN VIVO (Aviso de Privacidad/ARCO, footer "Contacto", cuenta.php) → si alguien escribe, **rebota**.
-  - Otros recomendados: `redes@` (redes sociales), `soporte@`/`ayuda@` (soporte), `ventas@`/`lotes@` (B2B lotes/agencias), `hola@`/`info@` (genérico), `facturacion@` (Fase 2 cobros).
-  - 💡 **Plan FREE Business Email = 1 solo buzón** (ya lo usa no-reply). Opciones: **reenvíos/alias gratis** (contacto@ → reenvía al correo principal del usuario, lo más fácil + resuelve lo urgente) o **plan de email de pago** para buzones separados. Crear en hPanel → Emails.
+- **Crear más correos de @arcademotorsmx.com**:
+  - ✅ **`contacto@` RESUELTO (2026-06-29):** ya NO rebota. Configurado vía **alias `contacto@` → buzón `no-reply@`** (alias de email, 1/5 usado) + **reenviador `no-reply@` → gabo6999@gmail.com** (Activo, confirmado por el usuario; "Guardar copias" ON). Resultado: el correo a contacto@ llega al Gmail del usuario. *(Aprendizaje hPanel: el plan FREE Business Email permite hasta **100 buzones**, NO 1 como se creía. Un **reenviador exige un buzón YA existente como origen** → no se puede reenviar desde una dirección inexistente; por eso se usó alias hacia no-reply@. El reenviador a un correo externo queda en "Esperando confirmación" hasta que el dueño del destino hace clic en el email de Hostinger.)*
+  - Otros recomendados (cuando se quiera): `redes@` (redes sociales), `soporte@`/`ayuda@` (soporte), `ventas@`/`lotes@` (B2B lotes/agencias), `hola@`/`info@` (genérico), `facturacion@` (Fase 2 cobros). Como hay 100 buzones libres, se pueden crear como buzones reales (requieren contraseña) o como alias del mismo no-reply@.
 
 ---
 
