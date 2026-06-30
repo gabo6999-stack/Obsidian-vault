@@ -116,3 +116,10 @@ Detalle completo: [[2026-06-27 — Arcade Motors KYC opcional, fotos, perfil, fa
 - **KYC** compradores/vendedores + **anti-abuso "sube y sube gratis"** (Fase 2): caducidad 30d + 1 gratis por identidad-KYC + 1 activo por VIN + límite por teléfono.
 - **Verificación de correo por email** del usuario en registro (¿parte del KYC?) — la verificación de correo electrónico ya quedó hecha esta sesión.
 - ✅ **HECHO (2026-06-29): anuncios sembrados** — el usuario subió varios anuncios reales con foto (en vivo hay **4**: Honda Civic $218k, Ford Fusion Hybrid Titanium $159k, Fiat 500 Abarth $138k, Dodge Neon SRT-4 $215k). Verificado en `buscar.php`: tarjetas renderizan OK con foto, precio ámbar, badge **✓ Verificado** verde, badge **SEMINUEVO** magenta, corazón de favoritos e íconos pixel de año/km/transmisión. Los FX de tarjeta ya son visibles (ya no estaban "invisibles con 0 anuncios").
+
+
+
+---
+
+## Sesión 2026-06-30
+Recuperé la BD borrada (backup hPanel, no fue hackeo) e hice SEO Tier 1+2 (sitemap, schema, canonical, GSC, IndexNow, URLs limpias) y lancé el blog automatizado con el Agente de Blogs (ya publica solo). El deploy ahora es por SSH/scp. Próximo: SEO Tier 3 (backlinks, Google Business, redes) y 2FA en hPanel.
